@@ -1,0 +1,24 @@
+.contactContainer
+{
+	background-image: url('../../image/photo-1589648944670-522a156c0e02.jpg');
+	background-size: cover;
+	/* object-fit: cover; */
+	background-position: center;
+	height: 400px;
+	background-repeat: no-repeat;
+	width: 85%;
+	padding: 40px; 
+	margin: 30px auto;
+}
+
+.infoContainer
+{
+	width: 40%;
+	line-height: 40px;
+}
+
+.subDiv
+{
+	line-height: 30px;
+	margin: 18px 0px;
+}

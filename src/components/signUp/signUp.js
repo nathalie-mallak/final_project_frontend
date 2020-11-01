@@ -5,24 +5,26 @@ import FormControl from '@material-ui/core/FormControl'
 import Visibility from '@material-ui/icons/Visibility'
 import VisibilityOff from '@material-ui/icons/VisibilityOff'
 import IconButton from '@material-ui/core/IconButton'
-import Input from '@material-ui/core/Input'
+import OutlinedInput from '@material-ui/core/OutlinedInput'
 import InputLabel from '@material-ui/core/InputLabel'
 import InputAdornment from '@material-ui/core/InputAdornment'
-import Select from '@material-ui/core/Select'
 import MenuItem from '@material-ui/core/MenuItem'
 import axios from 'axios'
+import Buttons from '../buttons/buttons'
 import './signUp.css'
+import { useHistory } from 'react-router-dom'
 
 // TODO: 
 // fix phone number
 // onclick function --> signUp
-// REDIRRECT to home page
-// gender value
-// password variant
+// REDIRRECT to home page -----> done
+// gender value -----> done
+// password variant -------> done
 
 const SignUp = () => {
 
 	const classes = useStyles()
+	const history = useHistory()
 
 	const [userInfo, setUserInfo] = useState({
 		fname: '',
@@ -74,6 +76,9 @@ const SignUp = () => {
 			.post(`route`, data)
 			.then(res => {
 				console.log(res)
+
+				//redirect to home page
+				history.push('/')
 			})
 			.catch(err => {
 				console.log(err)
@@ -96,7 +101,7 @@ const SignUp = () => {
 
 				<FormControl variant='outlined' className={classes.textField}>
 					<InputLabel> Password </InputLabel>
-					<Input
+					<OutlinedInput
 						type={values.showPassword ? 'text' : 'password'}
 						value={values.password}
 						onChange={changePass('password')}
@@ -111,31 +116,23 @@ const SignUp = () => {
 							</IconButton>
 						</InputAdornment>
 						}
+						labelWidth={70}
 					/>
 				</FormControl>
 
-				<FormControl variant='outlined' className={classes.textField}>
-					<InputLabel> Gender </InputLabel>
-					<Select
-						value={userInfo.gender}
-						onChange={(e) => {setUserInfo({...userInfo, gender: e.target.value})}}
-						label='Gender'
-						required
-					>
-						<MenuItem> Female </MenuItem>
-						<MenuItem> Male </MenuItem>
-					</Select>
-				</FormControl>
+				<TextField className={classes.textField} label='Gender' select name='gender' onChange={(e) => {setUserInfo({...userInfo, gender: e.target.value})}} value={userInfo.gender} variant='outlined' required> 
+					<MenuItem value={1}> Female </MenuItem>
+					<MenuItem value={2}> Male </MenuItem> 
+				</TextField>
 
 				<TextField className={classes.textField} label='Phone Number' type='text' name='phone' onChange={(e) => {setUserInfo({...userInfo, phone: e.target.value})}} variant='outlined' required/>
 
-				<button 
+				<Buttons 
 					type='submit' 
+					text= 'Sign Up'
+					backgroundColor= 'pink'
 					disabled={userInfo.fname === '' || userInfo.lname === '' || userInfo.email === '' || userInfo.password === '' ||userInfo.phone === '' || userInfo.gender === '' || userInfo.dob === '' || userInfo.age === ''}
-				> 
-					Sign Up 
-				</button>
-
+				/> 
 			</form>
 		</>
 	)
@@ -145,6 +142,6 @@ export default SignUp
 
 const useStyles = makeStyles(() => ({
 	textField: {
-		marginBottom: '10px',
+		marginBottom: '15px',
 	},
   }))
