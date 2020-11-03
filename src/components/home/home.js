@@ -12,7 +12,7 @@ const Home = () => {
 			<Header />
 			<div className='homeContainer'>
 			<div className='carousel'>
-			<Carousel>
+			{/* <Carousel>
 				<div>
 					<img src={Wedding} alt=''/>
 					<p className="legend">Legend 1</p>
@@ -25,7 +25,7 @@ const Home = () => {
 					<img src="assets/3.jpeg" alt=''/>
 					<p className="legend">Legend 3</p>
 				</div> */}
-			</Carousel>
+			{/* </Carousel>  */}
 			</div>
 			</div>
 

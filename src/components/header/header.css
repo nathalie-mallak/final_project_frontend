@@ -6,3 +6,18 @@
 	padding: 0;
 	margin: 0;
 }
+
+.linksDiv
+{
+	display: flex;
+	justify-content: space-evenly;
+	width: 60%;
+	font-size: 15px;
+}
+
+.link:hover
+{
+	color: rgb(231, 165, 176);
+	transform: scale(1.05);
+	cursor: pointer
+}
