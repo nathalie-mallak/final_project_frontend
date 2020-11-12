@@ -13,9 +13,10 @@ import axios from 'axios'
 import Buttons from '../buttons/buttons'
 import './signUp.css'
 import { useHistory } from 'react-router-dom'
+import Header from '../header/header'
 
 // TODO: 
-// fix phone number
+// fix phone number regex
 // onclick function --> signUp
 // REDIRRECT to home page -----> done
 // gender value -----> done
@@ -87,6 +88,7 @@ const SignUp = () => {
 
 	return (
 		<>
+			<Header />
 			<form onSubmit={submitHandler} className='container'>
 
 				<TextField className={classes.textField} label='First Name' type='text' name='fname' onChange={(e) => {setUserInfo({...userInfo, fname: e.target.value})}} variant='outlined' required/>
@@ -131,7 +133,7 @@ const SignUp = () => {
 					type='submit' 
 					text= 'Sign Up'
 					backgroundColor= 'pink'
-					disabled={userInfo.fname === '' || userInfo.lname === '' || userInfo.email === '' || userInfo.password === '' ||userInfo.phone === '' || userInfo.gender === '' || userInfo.dob === '' || userInfo.age === ''}
+					disabled={userInfo.fname === '' || userInfo.lname === '' || userInfo.email === '' || values.password === '' ||userInfo.phone === '' || userInfo.gender === '' || userInfo.dob === '' || userInfo.age === ''}
 				/> 
 			</form>
 		</>

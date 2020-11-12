@@ -2,8 +2,8 @@ import React from 'react'
 import ContactUs from '../contactUs/contactUs'
 import AboutUs from '../aboutUs/aboutUs'
 import Header from '../header/header'
-import { Carousel } from 'react-responsive-carousel'
-import Wedding from '../../image/wedding.jpg'
+// import { Carousel } from 'react-responsive-carousel'
+// import Wedding from '../../image/wedding.jpg'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 const Home = () => {

@@ -118,7 +118,9 @@ const Header = () => {
 			<AppBar position='static' className={classes.bar}>
 				<Toolbar>
 					<Typography className={classes.title} variant='h6' noWrap>
-						Flowers For You
+						<Link to='/'>
+							Flowers For You
+						</Link>
 					</Typography>
 		
 					<div className={classes.search}>
@@ -170,11 +172,11 @@ const Header = () => {
 							Customize your order
 						</Link>
 
-						<a href='#contact'>
+						<a href='/#contact'>
 							<p className='link'> Contact Us </p>
 						</a>
 						
-						<a href='#about'>
+						<a href='/#about'>
 							<p className='link'> About Us </p>
 						</a>
 

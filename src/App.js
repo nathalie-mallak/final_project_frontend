@@ -8,6 +8,8 @@ import Love from './components/occasions/love'
 import Gratitude from './components/occasions/gratitude'
 import Sympathy from './components/occasions/sympathy'
 import Customization from './components/customization/customization'
+// import { Provider } from 'react-redux'
+// import store from './reducers/store'
 
 function App() {
 	return (
@@ -22,6 +24,8 @@ function App() {
 					<Route exact path='/love' component={Love} />
 					<Route exact path='/gratitude' component={Gratitude} />
 					<Route exact path='/customization' component={Customization} />
+
+					{/* do we need a dynamic route? */}
 				</Switch>
 			</BrowserRouter>
 		</>
