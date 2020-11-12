@@ -13,7 +13,7 @@ import axios from 'axios'
 import Buttons from '../buttons/buttons'
 import './signUp.css'
 import { useHistory } from 'react-router-dom'
-import Header from '../header/header'
+
 
 // TODO: 
 // fix phone number regex
@@ -88,7 +88,6 @@ const SignUp = () => {
 
 	return (
 		<>
-			<Header />
 			<form onSubmit={submitHandler} className='container'>
 
 				<TextField className={classes.textField} label='First Name' type='text' name='fname' onChange={(e) => {setUserInfo({...userInfo, fname: e.target.value})}} variant='outlined' required/>

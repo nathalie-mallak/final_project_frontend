@@ -78,7 +78,6 @@ const Customization = (props) =>
   
 	return (
 		<>
-			<Header/>
 			<h3> Where Flowers Bloom , So Does Hope </h3>
 			<p> Let's first choose the basket </p>
 

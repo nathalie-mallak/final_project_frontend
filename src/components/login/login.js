@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Header from '../header/header'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom'
 import Buttons from '../buttons/buttons'
@@ -59,7 +58,6 @@ const Login = () => {
 
 	return (
 		<>
-			<Header />
 
 			<form onSubmit={submitHandler} className='container'>
 
