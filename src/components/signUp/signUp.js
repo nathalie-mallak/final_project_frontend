@@ -84,6 +84,8 @@ const SignUp = () => {
 			.catch(err => {
 				console.log(err)
 			})
+
+		// when created, we have to login --> dispatch login
 	}
 
 	return (

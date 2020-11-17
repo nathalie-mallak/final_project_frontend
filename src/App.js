@@ -8,10 +8,14 @@ import Love from './components/occasions/love'
 import Gratitude from './components/occasions/gratitude'
 import Sympathy from './components/occasions/sympathy'
 import Customization from './components/customization/customization'
-// import { Provider } from 'react-redux'
-// import store from './reducers/store'
+import { loadUser } from './actions/authActions'
+
+import store from './store'
 
 function App() {
+
+	store.dispatch(loadUser())
+
 	return (
 		<>
 			<BrowserRouter>

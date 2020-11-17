@@ -1,19 +1,27 @@
-/* eslint-disable import/no-anonymous-default-export */
-import { GET_FLOWERS } from '../actions/types'
+import { GET_FLOWERS, ITEMS_LOADING } from '../actions/types'
 
-// the items that come from the get request
+// flowers that come from the get request
 const initialState = {
-	items: []
+	flowers: [],
+	loading: false
 }
 
-export default function(state = initialState, action) {
+const FlowerReducer = (state = initialState, action) => {
 	switch(action.type) {
 		case GET_FLOWERS:
 			return {
 				...state,
-				items: action.payload
+				flowers: action.payload,
+				loading: false
 			};
+		case ITEMS_LOADING:
+			return {
+				...state,
+				loading: true
+			}
 		default: 
-			return state;
+			return state
 	}
 }
+
+export default FlowerReducer

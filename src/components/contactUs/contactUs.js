@@ -1,6 +1,8 @@
 import React from 'react'
 import './contactUs.css'
 
+// add media icons
+
 const ContactUs = () => {
 
 	return (

@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import Header from '../header/header'
-import axios from 'axios'
-import { useHistory } from 'react-router-dom'
 import Buttons from '../buttons/buttons'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
+import { login } from '../../actions/authActions'
 
 import { makeStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
@@ -14,10 +15,16 @@ import OutlinedInput from '@material-ui/core/OutlinedInput'
 import InputLabel from '@material-ui/core/InputLabel'
 import InputAdornment from '@material-ui/core/InputAdornment'
 
-const Login = () => {
+const Login = props => {
 
 	const classes = useStyles()
-	const history = useHistory()
+
+	// to precise types
+	Login.propTypes = {
+		isAuthenticated: PropTypes.bool,
+		error: PropTypes.object.isRequired,
+		login: PropTypes.func.isRequired
+	}
 
 	const [email, setEmail] = useState('')
 	const [values, setValues] = useState({
@@ -45,16 +52,9 @@ const Login = () => {
 			email: email,
 			password: values.password
 		}
-
-		axios
-			.post('/user/login', data)
-			.then((res) => {
-				console.log(res)
-				// setEmail(res.data);
-				// setValues(res.data)
-				history.push('/')
-			})
-			.catch((err) => alert('wrong credentials'))
+		console.log(data)
+		// attempt to login
+		props.login(data)
 	}
 
 	return (
@@ -97,8 +97,13 @@ const Login = () => {
 	)
 }
 
-export default Login
+const mapStateToProps = state => ({
+	//got them from the reducer
+	isAuthenticated: state.auth.isAuthenticated,
+	error: state.error
+})
 
+export default connect(mapStateToProps, { login })(Login)
 
 const useStyles = makeStyles(() => ({
 	textField: {

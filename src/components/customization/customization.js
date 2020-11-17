@@ -1,13 +1,9 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-unused-expressions */
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
 import Header from '../header/header'
 import './customization.css'
 import SelectFlowers from '../select'
 import { connect } from 'react-redux'
-import { getFlowers } from '../../actions/flowerAction'
+import { getFlowers, getBaskets, getNoteCard } from '../../actions/customizationAction'
 import PropTypes from 'prop-types'
 
 import { makeStyles } from '@material-ui/core/styles'
@@ -30,9 +26,6 @@ const Customization = (props) =>
 
 	const [expanded, setExpanded] = useState(false)
 
-	const [baskets, setBaskets] = useState([])
-	const [noteCards, setNoteCards] = useState([])
-
 	//it is replaced by props
 	// const [flowers, setFlowers] = useState([])
 
@@ -40,40 +33,21 @@ const Customization = (props) =>
 		setExpanded(!expanded)
 	}
 
+	Customization.propTypes = {
+		getFlowers: PropTypes.func.isRequired,
+		getBaskets: PropTypes.func.isRequired,
+		getNoteCard: PropTypes.func.isRequired,
+		flowers: PropTypes.object.isRequired,
+		baskets: PropTypes.object.isRequired,
+		noteCards: PropTypes.object.isRequired
+	}
+
 	useEffect(() => {
-		axios
-			.get('/api/baskets')
-			.then((res) => {
-				console.log(res)
-				setBaskets(res.data)
-			})
-			.catch((err) => {
-				console.log(err)
-			})
 
-			//saret bl reducer
-		// axios
-		// 	.get('/api/flowers')
-		// 	.then((res) => {
-		// 		console.log(res)
-		// 		setFlowers(res.data)
-		// 	})
-		// 	.catch((err) => {
-		// 		console.log(err)
-		// 	})
-
-		// it replaces the axios.get flowers method
+		props.getBaskets()
 		props.getFlowers()
+		props.getNoteCard()
 
-		axios
-			.get('/api/noteCards')
-			.then((res) => {
-				console.log(res)
-				setNoteCards(res.data)
-			})
-			.catch((err) => {
-				console.log(err)
-			})
 	}, [])
   
 	return (
@@ -83,9 +57,9 @@ const Customization = (props) =>
 			<p> Let's first choose the basket </p>
 
 			{/* getting the baskets */}
-			{baskets.map( basket => (
+			{props.baskets.baskets.map( basket => (
 				<Card className={classes.root} key={basket.id}>
-					<CardHeader title={basket.title}/>
+					<CardHeader title={basket.name}/>
 					<CardMedia
 						className={classes.media}
 						image={basket.image}
@@ -95,37 +69,39 @@ const Customization = (props) =>
 			))}
 
 			{/* getting the flowers */}
-			{props.flowers.map(flower => (
-				<Card className={classes.root}>
-					<CardHeader title={flower.title}/>
-					<CardMedia
-						className={classes.media}
-						image={flower.image}
-					/>
-					<CardActions disableSpacing>
-						<IconButton aria-label='add to favorites'>
-							<FavoriteIcon />
-						</IconButton>
-						<IconButton
-							className={clsx(classes.expand, {
-							[classes.expandOpen]: expanded,
-							})}
-							onClick={handleExpandClick}
-							aria-expanded={expanded}
-							aria-label='show more'
-						>
-							<ExpandMoreIcon />
-						</IconButton>
-					</CardActions>
-					<Collapse in={expanded} timeout='auto' unmountOnExit>
-						<CardContent>
-							<Typography paragraph>
-								{flower.description}
-							</Typography>
-						</CardContent>
-					</Collapse>
-				</Card>
-			))}
+			{/* flower represents the state object, however flowers represent the array of flowers */}
+			{props.flowers.flowers ? props.flowers.flowers.map(flower => {
+				return <Card className={classes.root}>
+						<CardHeader title={flower.name}/>
+						<CardMedia
+							className={classes.media}
+							image={flower.image}
+						/>
+						<CardActions disableSpacing>
+							<IconButton aria-label='add to favorites'>
+								<FavoriteIcon />
+							</IconButton>
+							<IconButton
+								className={clsx(classes.expand, {
+								[classes.expandOpen]: expanded,
+								})}
+								onClick={handleExpandClick}
+								aria-expanded={expanded}
+								aria-label='show more'
+							>
+								<ExpandMoreIcon />
+							</IconButton>
+						</CardActions>
+						<Collapse in={expanded} timeout='auto' unmountOnExit>
+							<CardContent>
+								<Typography paragraph>
+									{flower.description}
+								</Typography>
+							</CardContent>
+						</Collapse>
+							</Card> }) 
+						: 'LOADING'
+			}
 
 			<p> Let's now choose the flower arragement </p>
 			<div className='designContainer'>
@@ -139,15 +115,24 @@ const Customization = (props) =>
 	)
 }
 
-Customization.propTypes ={
-	getFlowers: PropTypes.func.isRequired,
-	flowers: PropTypes.array.isRequired
-}
-const mapStateToProps = state => ({
-	flowers: state.flowers.items
-})
+// it allows us to grap flowers from the state and map them into component
+// const mapStateToProps = state => ({
+// 	flowers: state.flower
+	
+// })
+const mapStateToProps = state => { 
+	const { flower } = state;
+	const { basket } = state;
+	const { noteCard } = state;
 
-export default connect(mapStateToProps, { getFlowers })(Customization)
+	return { 
+		flowers: flower,
+		baskets: basket,
+		noteCards: noteCard
+	}
+}
+
+export default connect(mapStateToProps, {getFlowers, getBaskets, getNoteCard})(Customization)
 
 const useStyles = makeStyles((theme) => ({
 	root: {
