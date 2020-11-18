@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
-import Header from '../header/header'
+import axios from 'axios'
+import { useHistory } from 'react-router-dom'
 import Buttons from '../buttons/buttons'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { login } from '../../actions/authActions'
+import { clearErrors } from '../../actions/errorActions'
 
 import { makeStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
@@ -59,7 +61,6 @@ const Login = props => {
 
 	return (
 		<>
-			<Header />
 
 			<form onSubmit={submitHandler} className='container'>
 
@@ -103,7 +104,7 @@ const mapStateToProps = state => ({
 	error: state.error
 })
 
-export default connect(mapStateToProps, { login })(Login)
+export default connect(mapStateToProps, { login, clearErrors })(Login)
 
 const useStyles = makeStyles(() => ({
 	textField: {

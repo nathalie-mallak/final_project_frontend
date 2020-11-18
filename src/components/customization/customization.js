@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Header from '../header/header'
 import './customization.css'
 import SelectFlowers from '../select'
 import { connect } from 'react-redux'
@@ -52,7 +51,6 @@ const Customization = (props) =>
   
 	return (
 		<>
-			<Header/>
 			<h3> Where Flowers Bloom , So Does Hope </h3>
 			<p> Let's first choose the basket </p>
 

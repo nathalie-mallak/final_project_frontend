@@ -1,4 +1,11 @@
 import React, { useState } from 'react'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
+import Buttons from '../buttons/buttons'
+import './signUp.css'
+import { register } from '../../actions/authActions'
+import { clearErrors } from '../../actions/errorActions'
+
 import { makeStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 import FormControl from '@material-ui/core/FormControl'
@@ -9,11 +16,6 @@ import OutlinedInput from '@material-ui/core/OutlinedInput'
 import InputLabel from '@material-ui/core/InputLabel'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import MenuItem from '@material-ui/core/MenuItem'
-import axios from 'axios'
-import Buttons from '../buttons/buttons'
-import './signUp.css'
-import { useHistory } from 'react-router-dom'
-import Header from '../header/header'
 
 // TODO: 
 // fix phone number regex
@@ -25,7 +27,12 @@ import Header from '../header/header'
 const SignUp = () => {
 
 	const classes = useStyles()
-	const history = useHistory()
+
+	SignUp.prototypes = {
+		register: PropTypes.func.isRequired,
+		isAuthenticated: PropTypes.bool,
+		error: PropTypes.object.isRequired
+	}
 
 	const [userInfo, setUserInfo] = useState({
 		fname: '',
@@ -72,25 +79,12 @@ const SignUp = () => {
 			dob: selectedDate
 		}
 
-		// route from backend
-		axios
-			.post(`route`, data)
-			.then(res => {
-				console.log(res)
-
-				//redirect to home page
-				history.push('/')
-			})
-			.catch(err => {
-				console.log(err)
-			})
-
+		props.register(data)
 		// when created, we have to login --> dispatch login
 	}
 
 	return (
 		<>
-			<Header />
 			<form onSubmit={submitHandler} className='container'>
 
 				<TextField className={classes.textField} label='First Name' type='text' name='fname' onChange={(e) => {setUserInfo({...userInfo, fname: e.target.value})}} variant='outlined' required/>
@@ -135,17 +129,24 @@ const SignUp = () => {
 					type='submit' 
 					text= 'Sign Up'
 					backgroundColor= 'pink'
-					disabled={userInfo.fname === '' || userInfo.lname === '' || userInfo.email === '' || values.password === '' ||userInfo.phone === '' || userInfo.gender === '' || userInfo.dob === '' || userInfo.age === ''}
+					disabled={userInfo.fname === '' || userInfo.lname === '' || userInfo.email === '' || values.password === '' || userInfo.phone === '' || userInfo.gender === '' || userInfo.dob === '' || userInfo.age === ''}
 				/> 
 			</form>
 		</>
 	)
 }
 
-export default SignUp
+const mapStateToProps = state => ({
+	
+	//got them from the reducer
+	isAuthenticated: state.auth.isAuthenticated,
+	error: state.error
+})
+
+export default connect(mapStateToProps, { register, clearErrors })(SignUp)
 
 const useStyles = makeStyles(() => ({
 	textField: {
 		marginBottom: '15px',
 	},
-  }))
+}))
