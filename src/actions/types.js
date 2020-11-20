@@ -16,10 +16,7 @@ export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS'
 export const REGISTER_SUCCESS = 'REGISTER_SUCCESS'
 export const REGISTER_FAIL = 'REGISTER_FAIL'
 
-export const GET_HAPPY = 'GET_HAPPY'
-export const GET_GRATITUDE = 'GET_GRATITUDE'
-export const GET_LOVE = 'GET_LOVE'
-export const GET_SYMPATHY = 'GET_SYMPATHY'
+export const GET_OCCASIONS = 'GET_OCCASIONS'
 
 export const ITEMS_LOADING = 'ITEMS_LOADING'
 

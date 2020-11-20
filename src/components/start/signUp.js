@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import Buttons from '../buttons/buttons'
-import './signUp.css'
+import './start.css'
 import { register } from '../../actions/authActions'
 import { clearErrors } from '../../actions/errorActions'
 
@@ -19,12 +19,9 @@ import MenuItem from '@material-ui/core/MenuItem'
 
 // TODO: 
 // fix phone number regex
-// onclick function --> signUp
-// REDIRRECT to home page -----> done
-// gender value -----> done
-// password variant -------> done
+// REDIRRECT to home page
 
-const SignUp = () => {
+const SignUp = props => {
 
 	const classes = useStyles()
 
@@ -38,7 +35,6 @@ const SignUp = () => {
 		fname: '',
 		lname: '',
 		email: '',
-		age: '',
 		phone: '',
 		gender: '',
 		dob: ''
@@ -73,12 +69,12 @@ const SignUp = () => {
 			lname: userInfo.lname,
 			email: userInfo.email,
 			password: values.password,
-			age: userInfo.age,
 			phone: userInfo.phone,
 			gender: userInfo.gender,
 			dob: selectedDate
 		}
 
+		// const data ={...userInfo,...values};
 		props.register(data)
 		// when created, we have to login --> dispatch login
 	}
@@ -90,8 +86,6 @@ const SignUp = () => {
 				<TextField className={classes.textField} label='First Name' type='text' name='fname' onChange={(e) => {setUserInfo({...userInfo, fname: e.target.value})}} variant='outlined' required/>
 
 				<TextField className={classes.textField} label='Last Name' type='text' name='lname' onChange={(e) => {setUserInfo({...userInfo, lname: e.target.value})}} variant='outlined' required/>
-
-				<TextField className={classes.textField} label='Age' type='number' name='age' onChange={(e) => {setUserInfo({...userInfo, age: e.target.value})}} variant='outlined' required/>
 
 				<TextField className={classes.textField} label='Date Of Birth' type='date' name='dob' onChange={dateHandler} variant='outlined' InputLabelProps={{shrink: true}} required/>
 
@@ -129,7 +123,7 @@ const SignUp = () => {
 					type='submit' 
 					text= 'Sign Up'
 					backgroundColor= 'pink'
-					disabled={userInfo.fname === '' || userInfo.lname === '' || userInfo.email === '' || values.password === '' || userInfo.phone === '' || userInfo.gender === '' || userInfo.dob === '' || userInfo.age === ''}
+					disabled={userInfo.fname === '' || userInfo.lname === '' || userInfo.email === '' || values.password === '' || userInfo.phone === '' || userInfo.gender === '' || userInfo.dob === ''}
 				/> 
 			</form>
 		</>

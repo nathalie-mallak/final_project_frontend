@@ -1,30 +1,24 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Home from '../home/home'
-import SignUp from '../signUp/signUp'
-import Login from '../login/login'
-import Happy from '../occasions/happy'
-import Love from '../occasions/love'
-import Gratitude from '../occasions/gratitude'
-import Sympathy from '../occasions/sympathy'
+import Start from '../start/start'
+import Occasions from '../occasions/occasions'
 import Customization from '../customization/customization'
-import Header from '../header/header'
+import Admin from '../adminDashboard/Index'
 
 export default function main() {
     return (
         <div>
-            {/* admin panel does not need this header */}
-            <Header />
-
             <div>
                 <Switch>
                     <Route exact path='/' component={Home} />
-                    <Route exact path='/signUp' component={SignUp} />
-                    <Route exact path='/login' component={Login} />
-                    <Route exact path='/sympathy' component={Sympathy} />
-                    <Route exact path='/happy' component={Happy} />
-                    <Route exact path='/love' component={Love} />
-                    <Route exact path='/gratitude' component={Gratitude} />
+                    <Route exact path='/admin' component={Admin} />
+                    <Route exact path='/start' component={Start} />
+                    <Route exact path='/occasions' component={Occasions}/>
+                    {/* <Route exact path='/sympathyOccasions' component={Sympathy} />
+                    <Route exact path='/happyOccasions' component={Happy} />
+                    <Route exact path='/loveOccasions' component={Love} />
+                    <Route exact path='/gratitudeOccasions' component={Gratitude} /> */}
                     <Route exact path='/customization' component={Customization} />
 
                     {/* do we need a dynamic route? yes */}

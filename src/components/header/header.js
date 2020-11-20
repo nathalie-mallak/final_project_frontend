@@ -94,19 +94,15 @@ const Header = () => {
 					</MenuItem>
 
 					<MenuItem>
-						<a href='#contact'> Contact Us </a>
+						<a href='/#contact'> Contact Us </a>
 					</MenuItem>
 
 					<MenuItem>
-						<a href='#about'> About Us </a>
+						<a href='/#about'> About Us </a>
 					</MenuItem>
 
 					<MenuItem>
-						<Link to='login'> Login </Link>
-					</MenuItem>
-
-					<MenuItem>
-						<Link to='signUp'> Sign Up </Link>
+						<Link to='/start'> Get Started </Link>
 					</MenuItem>
 				</MenuList>
 			</Paper>
@@ -157,10 +153,10 @@ const Header = () => {
 								>
 								<Paper>
 									<MenuList autoFocusItem={open} id='menu-list-grow' className={classes.drpdown}>
-										<MenuItem><Link to='/happy'> Happy </Link></MenuItem>
-										<MenuItem><Link to='/gratitude'> Gratitude </Link></MenuItem>
-										<MenuItem><Link to='/love'> Love </Link></MenuItem>
-										<MenuItem><Link to='/sympathy'> Sympathy </Link></MenuItem>
+										<MenuItem><Link to='/happyOccasions'> Happy </Link></MenuItem>
+										<MenuItem><Link to='/gratitudeOccasions'> Gratitude </Link></MenuItem>
+										<MenuItem><Link to='/loveOccasions'> Love </Link></MenuItem>
+										<MenuItem><Link to='/sympathyOccasions'> Sympathy </Link></MenuItem>
 									</MenuList>
 								</Paper>
 								</Grow>
@@ -180,12 +176,8 @@ const Header = () => {
 							<p className='link'> About Us </p>
 						</a>
 
-						<Link to ='/login' className='link'>
-							Login
-						</Link>
-
-						<Link to ='/signUp' className='link'>
-							Sign Up
+						<Link to ='/start' className='link'>
+							Get Started
 						</Link>
 					</div>
 

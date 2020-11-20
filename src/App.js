@@ -1,20 +1,27 @@
 import React from 'react'
-import { BrowserRouter} from 'react-router-dom'
+import { BrowserRouter as Router , useHistory} from 'react-router-dom'
 import { loadUser } from './actions/authActions'
-import store from './store'
 import Main from './components/main/main'
+import { useSelector, useDispatch } from 'react-redux'
 
 function App() {
 
-	store.dispatch(loadUser())
+	// const AuthState = useSelector(state => state.auth)
+	// const history = useHistory()
+	// 	if(AuthState.isAuthenticated){
+	// 		history.push('/');
+	// 	}
+	
+	const dispatch = useDispatch()
+	dispatch(loadUser)
 
 	return (
 		<>
-			<BrowserRouter>
-				<div >
+			<Router>
+				< >
 					<Main />
-				</div>
-			</BrowserRouter>
+				</>
+			</Router>
 		</>
 	)
 }
