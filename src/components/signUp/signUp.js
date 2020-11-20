@@ -24,7 +24,7 @@ import MenuItem from '@material-ui/core/MenuItem'
 // gender value -----> done
 // password variant -------> done
 
-const SignUp = () => {
+const SignUp = props => {
 
 	const classes = useStyles()
 
