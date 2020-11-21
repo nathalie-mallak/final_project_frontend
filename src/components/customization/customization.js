@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import './customization.css'
-import SelectFlowers from '../select'
+import { SelectFlowers } from '../select'
 import { connect } from 'react-redux'
 import { getFlowers, getBaskets, getNoteCard } from '../../actions/customizationAction'
 import PropTypes from 'prop-types'
+import Header from '../header/header'
 
 import { makeStyles } from '@material-ui/core/styles'
 import clsx from 'clsx'
@@ -14,6 +15,8 @@ import CardContent from '@material-ui/core/CardContent'
 import CardActions from '@material-ui/core/CardActions'
 import Collapse from '@material-ui/core/Collapse'
 import IconButton from '@material-ui/core/IconButton'
+import Paper from '@material-ui/core/Paper'
+import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import FavoriteIcon from '@material-ui/icons/Favorite'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
@@ -24,9 +27,6 @@ const Customization = (props) =>
 	const classes = useStyles()
 
 	const [expanded, setExpanded] = useState(false)
-
-	//it is replaced by props
-	// const [flowers, setFlowers] = useState([])
 
 	const handleExpandClick = () => {
 		setExpanded(!expanded)
@@ -51,25 +51,32 @@ const Customization = (props) =>
   
 	return (
 		<>
+			<Header/>
 			<h3> Where Flowers Bloom , So Does Hope </h3>
 			<p> Let's first choose the basket </p>
 
-			{/* getting the baskets */}
-			{props.baskets.baskets.map( basket => (
-				<Card className={classes.root} key={basket.id}>
-					<CardHeader title={basket.name}/>
-					<CardMedia
-						className={classes.media}
-						image={basket.image}
-					/>
-					<Button> Select </Button>
-				</Card>
-			))}
+			<Grid container spacing={3}>
+				<Grid item xs={6} sm={3}>
+						{/* getting the baskets */}
+						{props.baskets.baskets.map( basket => (
+							<Card className={classes.root} key={basket.id}>
+								<CardHeader title={basket.name}/>
+								<CardMedia
+									className={classes.media}
+									image={basket.image}
+								/>
+								<Button> Select </Button>
+							</Card>
+						))}
+				</Grid>
+			</Grid>
 
 			{/* getting the flowers */}
 			{/* flower represents the state object, however flowers represent the array of flowers */}
 			{props.flowers.flowers ? props.flowers.flowers.map(flower => {
-				return <Card className={classes.root}>
+				return <Grid container>
+						<Grid item xs={6} sm={3}>	
+			<Card className={classes.root}>
 						<CardHeader title={flower.name}/>
 						<CardMedia
 							className={classes.media}
@@ -97,9 +104,12 @@ const Customization = (props) =>
 								</Typography>
 							</CardContent>
 						</Collapse>
-							</Card> }) 
+							</Card>
+							</Grid>
+			</Grid> }) 
 						: 'LOADING'
 			}
+		
 
 			<p> Let's now choose the flower arragement </p>
 			<div className='designContainer'>
@@ -136,10 +146,17 @@ const useStyles = makeStyles((theme) => ({
 	root: {
 	  maxWidth: 345,
 	},
+	paper: {
+		padding: theme.spacing(2),
+		textAlign: 'center',
+		color: theme.palette.text.secondary,
+	  },
+
 	media: {
 	  height: 90,
 	  paddingTop: '56.25%', // 16:9
 	},
+
 	expand: {
 	  transform: 'rotate(0deg)',
 	  marginLeft: 'auto',

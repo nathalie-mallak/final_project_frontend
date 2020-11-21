@@ -4,6 +4,7 @@ import App from './App'
 import { Provider } from 'react-redux'
 import store from './store'
 import axios from 'axios'
+import "bootstrap/dist/css/bootstrap.min.css"
 
 axios.defaults.baseURL = 'http://localhost:5000'
 

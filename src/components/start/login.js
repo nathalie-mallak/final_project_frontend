@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import axios from 'axios'
-import { useHistory } from 'react-router-dom'
 import Buttons from '../buttons/buttons'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { login } from '../../actions/authActions'
 import { clearErrors } from '../../actions/errorActions'
+import './start.css'
 
 import { makeStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
@@ -54,16 +53,14 @@ const Login = props => {
 			email: email,
 			password: values.password
 		}
-		console.log(data)
 		// attempt to login
 		props.login(data)
 	}
 
 	return (
 		<>
-
 			<form onSubmit={submitHandler} className='container'>
-
+				
 				<TextField className={classes.textField} label='Email' type='email' name='email' value={email} onChange={handleEmail} variant='outlined' required/>
 
 				<FormControl variant='outlined' className={classes.textField}>
@@ -109,5 +106,6 @@ export default connect(mapStateToProps, { login, clearErrors })(Login)
 const useStyles = makeStyles(() => ({
 	textField: {
 		marginBottom: '15px',
+		fontSize: '11px'
 	},
   }))

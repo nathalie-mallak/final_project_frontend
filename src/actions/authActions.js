@@ -1,3 +1,4 @@
+import React from 'react'
 import axios from 'axios'
 import { USER_LOADED, USER_LOADING, AUTH_ERROR, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT_SUCCESS, REGISTER_SUCCESS, REGISTER_FAIL } from '../actions/types'
 import { returnErrors } from './errorActions'
@@ -14,17 +15,17 @@ export const loadUser = () => (dispatch, getState) => {
             type: USER_LOADED,
             payload: res.data
         }))
-        .catch(err => {
-            dispatch( returnErrors(err.response.data, err.response.status))
+        .catch(err =>
+            dispatch( returnErrors(err.response.data, err.response.status)),
             dispatch({
                 type: AUTH_ERROR,
             })
-        })
+        )
 }
 
 // register user
 export const register = (info) => dispatch => {
-
+ 
     //headers
     const config = {
         headers: {
@@ -38,16 +39,16 @@ export const register = (info) => dispatch => {
             type: REGISTER_SUCCESS,
             payload: res.data
         }))
-        .catch(err => {
-            dispatch( returnErrors(err.response.data, err.response.status, 'REGISTER_FAIL'))
+        .catch(err =>
+            dispatch( returnErrors(err.response.data, err.response.status, 'REFISTER_FAIL')),
             dispatch ({
                 type: REGISTER_FAIL
             })
-        })
+        )
 }
 
 // login user
-export const login = ({email, password}) => dispatch => {
+export const login = (info) => dispatch => {
 
     // headers
     const config = {
@@ -56,21 +57,21 @@ export const login = ({email, password}) => dispatch => {
         }
     }
 
-    // request body
-    const body = JSON.stringify({ email, password })
-
     axios
-        .post('/api/userLogin', body, config)
-        .then(res => dispatch ({
-            type: LOGIN_SUCCESS,
-            payload: res.data,
-        }))
-        .catch(err => {
-            dispatch( returnErrors(err.response.data, err.response.status, 'LOGIN_FAIL'))
-            dispatch({
-                type: LOGIN_FAIL,
+        .post('/api/userLogin', info, config)
+        .then(res => (
+            console.log(res.data),
+            dispatch ({
+                type: LOGIN_SUCCESS,
+                payload: res.data
             })
-        })
+        ))
+        .catch(err => 
+            dispatch( returnErrors(err.response.data, err.response.status, 'LOGIN_FAIL')),
+            dispatch({
+                type: LOGIN_FAIL
+            })
+        )
 }
 
 // logout user

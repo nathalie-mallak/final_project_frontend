@@ -14,22 +14,18 @@ const ContactUs = () => {
 					<p> We will be happy to receive your inquiries and orders </p>
 
 					<div className='subDiv'> 
-						<p> From Lebanon </p>
+						<h4> From Lebanon </h4>
 						<p> +96176466567 </p>
 					</div>
 
 					<div className='subDiv'> 
-						<p> Address </p>
+						<h4> Address </h4>
 						<p> Hamra-Street, Beirut, Lebanon </p>
 					</div>
 
 					<div className='subDiv'> 
-						<p> Mail Us </p>
+						<h4> Mail Us </h4>
 						<p> customerservice@flowersforyou.com </p>
-					</div>
-
-					<div className='subDiv'> 
-					<p> Follow Us </p>
 					</div>
 				</div>
 			</div>
