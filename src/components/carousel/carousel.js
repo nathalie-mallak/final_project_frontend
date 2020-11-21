@@ -14,7 +14,7 @@ export default function Slider() {
 
     return (
         <>
-          <Carousel fade='true' activeIndex={index} onSelect={handleSelect}>
+          <Carousel fade='true' activeIndex={index} onSelect={handleSelect}  style={{ top:"-20px" }}>
               <Carousel.Item>
               <img className='d-block w-100 ' src ={Slider1} alt='first image' style={{ height:'70vh' }}/>
                   <Carousel.Caption>

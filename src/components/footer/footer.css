@@ -1,0 +1,23 @@
+.change{
+
+    color: rgba(255, 255, 255, 0.8);
+     cursor:pointer; 
+     margin:1vh
+}
+.h2{
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+}
+#footer{
+   background-color: #BF5E66 ;
+}
+.icons{
+    color:white;
+}
+#copyright{
+    background-color: #BF5E66 ;
+    text-align: center;
+    color: white;
+}
+

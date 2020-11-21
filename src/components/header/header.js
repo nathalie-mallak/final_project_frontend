@@ -61,8 +61,8 @@ const Header = () => {
 			open={isMenuOpen}
 			onClose={handleMenuClose}
 		>
-			<Paper className={classes.drpdown}>
-				<MenuList >
+			<Paper className={classes.drpdown} >
+				<MenuList>
 					<MenuItem onClick={handleMenuClose}><Link to='/happyOccasions' className='sublink'> Happy </Link></MenuItem>
 					<MenuItem onClick={handleMenuClose}><Link to='/gratitudeOccasions' className='sublink'> Gratitude </Link></MenuItem>
 					<MenuItem onClick={handleMenuClose}><Link to='/loveOccasions' className='sublink'> Love </Link></MenuItem>
@@ -145,7 +145,7 @@ const Header = () => {
 							>
 								Occasions
 							</p>
-							<Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
+							<Popper className="dropdown" open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
 							{({ TransitionProps, placement }) => (
 								<Grow
 								{...TransitionProps}

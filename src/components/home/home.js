@@ -3,6 +3,7 @@ import ContactUs from '../contactUs/contactUs'
 import AboutUs from '../aboutUs/aboutUs'
 import Header from '../header/header'
 import Slider from '../carousel/carousel'
+import Footer from '../footer/footer'
 
 const Home = () => {
 	return (
@@ -17,8 +18,8 @@ const Home = () => {
 				<AboutUs />
 			</section>
 
-			<section id='contact'>
-				<ContactUs />
+			<section>
+				<Footer />
 			</section>
 			
 		</>

@@ -5,6 +5,7 @@
 	text-decoration: none;
 	padding: 0;
 	margin: 0;
+	
 }
 
 .linksDiv
@@ -39,4 +40,8 @@
 	transform: scale(1.05);
 	cursor: pointer;
 	text-decoration: none;
+}
+
+.dropdown{
+	z-index: 10;
 }
