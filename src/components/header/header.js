@@ -63,10 +63,10 @@ const Header = () => {
 		>
 			<Paper className={classes.drpdown}>
 				<MenuList >
-					<MenuItem onClick={handleMenuClose}><Link to='/happy'> Happy </Link></MenuItem>
-					<MenuItem onClick={handleMenuClose}><Link to='/gratitude'> Gratitude </Link></MenuItem>
-					<MenuItem onClick={handleMenuClose}><Link to='/love'> Love </Link></MenuItem>
-					<MenuItem onClick={handleMenuClose}><Link to='/sympathy'> Sympathy </Link></MenuItem>
+					<MenuItem onClick={handleMenuClose}><Link to='/happyOccasions'> Happy </Link></MenuItem>
+					<MenuItem onClick={handleMenuClose}><Link to='/gratitudeOccasions'> Gratitude </Link></MenuItem>
+					<MenuItem onClick={handleMenuClose}><Link to='/loveOccasions'> Love </Link></MenuItem>
+					<MenuItem onClick={handleMenuClose}><Link to='/sympathyOccasions'> Sympathy </Link></MenuItem>
 				</MenuList>
 			</Paper>
 		</Menu>

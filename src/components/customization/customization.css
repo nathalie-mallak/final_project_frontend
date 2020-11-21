@@ -4,3 +4,9 @@
 	width: 50%;
 	height: auto;
 }
+
+.gridContainer
+{
+	display: flex;
+	margin-bottom: 20px;
+}
