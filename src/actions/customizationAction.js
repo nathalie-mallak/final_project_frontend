@@ -7,7 +7,7 @@ export const getFlowers = () => dispatch => {
 
 	// like resolving a promise
 	axios
-		.get('/api/flowers')
+		.get('/api/items/flowers')
 		.then((res) => {
 			dispatch ({
 				type: GET_FLOWERS,
@@ -24,7 +24,7 @@ export const getBaskets = () => dispatch => {
 	dispatch(setItemsLoading())
 
 	axios
-		.get('/api/baskets')
+		.get('/api/items/baskets')
 		.then((res) => {
 			dispatch ({
 				type: GET_BASKETS,
@@ -41,7 +41,7 @@ export const getNoteCard = () => dispatch => {
 	dispatch(setItemsLoading())
 
 	axios
-		.get('/api/noteCards')
+		.get('/api/items/noteCards')
 		.then(res => {
 			dispatch ({
 				type: GET_NOTECARD,

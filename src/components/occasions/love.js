@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { getOccasions } from '../../actions/occasionAction'
+import { getLoveOccasions } from '../../actions/occasionAction'
 import PropTypes from 'prop-types'
 import './occasions.css'
 import { connect } from 'react-redux'
@@ -11,19 +11,19 @@ import CardHeader from '@material-ui/core/CardHeader'
 import CardMedia from '@material-ui/core/CardMedia'
 import Button from '@material-ui/core/Button'
 
-const Occasions = props => {
+const LoveOccasions = props => {
 
     const classes = useStyles()
 
     useEffect(() => {
 
-        props.getOccasions()
+        props.getLoveOccasions()
 
     }, [])
 
-    Occasions.propTypes = {
+    LoveOccasions.propTypes = {
         occasions: PropTypes.object.isRequired,
-        getOccasions: PropTypes.func.isRequired
+        getLoveOccasions: PropTypes.func.isRequired
     }
 
     return (
@@ -50,7 +50,7 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { getOccasions }) (Occasions)
+export default connect(mapStateToProps, { getLoveOccasions }) (LoveOccasions)
 
 const useStyles = makeStyles((theme) => ({
 	root: {
