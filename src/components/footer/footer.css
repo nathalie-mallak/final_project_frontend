@@ -1,23 +1,25 @@
-.change{
 
-    color: rgba(255, 255, 255, 0.8);
-     cursor:pointer; 
-     margin:1vh
-}
-.h2{
+.h4{
     text-align: center;
     font-family: 'Comfortaa', cursive;
     color: white;
 }
+
 #footer{
-   background-color: #BF5E66 ;
+   background-color: #BF5E66;
+   height: 100px;
+   padding-bottom: 20px
 }
+
 .icons{
     color:white;
+    cursor: pointer;
 }
+
 #copyright{
     background-color: #BF5E66 ;
     text-align: center;
     color: white;
+    font-size: 12px
 }
 

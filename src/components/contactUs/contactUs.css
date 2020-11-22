@@ -3,12 +3,12 @@
 	background-image: url('../../image/photo-1589648944670-522a156c0e02.jpg');
 	background-size: cover;
 	background-position: center;
-	height: 400px;
+	height: 500px;
 	background-repeat: no-repeat;
-	width: 94%;
+	width: 100%;
 	padding: 40px; 
 	margin: 30px auto;
-	color: #BF5E66
+	color: #6b6667
 }
 
 .infoContainer

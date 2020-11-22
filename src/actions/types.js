@@ -2,6 +2,9 @@ export const GET_FLOWERS = 'GET_FLOWERS'
 export const GET_BASKETS = 'GET_BASKETS'
 export const GET_NOTECARD = 'GET_NOTECARD'
 
+export const SEARCH_TEXT = 'SEARCH_ITEMS'
+export const FILTER_PRICE = 'FILTER_PRICE'
+
 export const ADD_FLOWERS = 'ADD_FLOWERS'
 export const DELETE_FLOWERS = 'DELETE_FLOWERS'
 

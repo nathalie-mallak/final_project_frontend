@@ -1,5 +1,22 @@
+.gridContainer 
+{
+	background-image: url('../../image/pink10.jpg');
+	background-size: 85rem ;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 60px 0px;
+	margin-top: -20px
+}
+
 .container
 {
 	display: flex;
 	flex-direction: column;
+}
+
+.formTitle 
+{
+	color: #BF5E66;
+	font-size: 22px;
+	font-weight: 400;
 }

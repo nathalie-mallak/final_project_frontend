@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './header.css'
 import { Link } from 'react-router-dom'
+import Search from '../search'
 
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
@@ -119,7 +120,7 @@ const Header = () => {
 						</Link>
 					</Typography>
 		
-					<div className={classes.search}>
+					{/* <div className={classes.search}>
 						<div className={classes.searchIcon}>
 							<SearchIcon />
 						</div>
@@ -131,7 +132,9 @@ const Header = () => {
 						}}
 						inputProps={{ 'aria-label': 'search' }}
 						/>
-					</div>
+					</div> */}
+
+					<Search />
 
 					<div className={classes.grow} />
 					<div className={classes.sectionDesktop}>
