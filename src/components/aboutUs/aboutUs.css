@@ -1,0 +1,11 @@
+.word-rotate.active
+{
+    visibility: visible;
+    width: auto;
+}
+
+.word-rotate .word-rotate-items
+{
+    position: relative;
+    width: 100%;
+}

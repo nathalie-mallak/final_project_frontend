@@ -36,7 +36,8 @@ const SympathyOccasions = props => {
 						className={classes.media}
 						image={occasion.image}
 					/>
-					<Button> Select </Button>
+					<p price={occasion.price}> </p>
+					<Button> Buy Now </Button>				
 				</Card>
 			))}
         </>

@@ -1,7 +1,10 @@
-.carousel
+*
 {
-    max-width: 50%;
-    height: 20%;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: unset;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
 }
 
 .homeContainer

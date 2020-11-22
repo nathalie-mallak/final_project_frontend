@@ -121,7 +121,7 @@ const SignUp = props => {
 
 				<Buttons 
 					type='submit' 
-					text= 'Sign Up'
+					text= 'Create an Account'
 					backgroundColor= 'pink'
 					disabled={userInfo.fname === '' || userInfo.lname === '' || userInfo.email === '' || values.password === '' || userInfo.phone === '' || userInfo.gender === '' || userInfo.dob === ''}
 				/> 

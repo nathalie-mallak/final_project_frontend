@@ -8,16 +8,13 @@ const Home = () => {
 	return (
 		<>
 			<Header />
-			<div className='homeContainer'>
-				
-			</div>
-
-			<section id='about'>
-				<AboutUs />
-			</section>
 
 			<section id='Carousel'>
 				<Slider/>
+			</section>
+
+			<section id='about'>
+				<AboutUs />
 			</section>
 
 			<section id='contact'>

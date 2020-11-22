@@ -63,10 +63,10 @@ const Header = () => {
 		>
 			<Paper className={classes.drpdown}>
 				<MenuList >
-					<MenuItem onClick={handleMenuClose}><Link to='/happyOccasions'> Happy </Link></MenuItem>
-					<MenuItem onClick={handleMenuClose}><Link to='/gratitudeOccasions'> Gratitude </Link></MenuItem>
-					<MenuItem onClick={handleMenuClose}><Link to='/loveOccasions'> Love </Link></MenuItem>
-					<MenuItem onClick={handleMenuClose}><Link to='/sympathyOccasions'> Sympathy </Link></MenuItem>
+					<MenuItem onClick={handleMenuClose}><Link to='/happyOccasions' className='sublink'> Happy </Link></MenuItem>
+					<MenuItem onClick={handleMenuClose}><Link to='/gratitudeOccasions' className='sublink'> Gratitude </Link></MenuItem>
+					<MenuItem onClick={handleMenuClose}><Link to='/loveOccasions' className='sublink'> Love </Link></MenuItem>
+					<MenuItem onClick={handleMenuClose}><Link to='/sympathyOccasions' className='sublink'> Sympathy </Link></MenuItem>
 				</MenuList>
 			</Paper>
 		</Menu>
@@ -90,19 +90,19 @@ const Header = () => {
 					</MenuItem>
 
 					<MenuItem>
-						<Link to='customization'> Customize your order </Link>
+						<Link to='customization' className='sublink'> Customize your order </Link>
 					</MenuItem>
 
 					<MenuItem>
-						<a href='/#contact'> Contact Us </a>
+						<a href='/#contact' className='sublink'> Contact Us</a>
 					</MenuItem>
 
 					<MenuItem>
-						<a href='/#about'> About Us </a>
+						<a href='/#about' className='sublink'> About Us </a>
 					</MenuItem>
 
 					<MenuItem>
-						<Link to='/start'> Get Started </Link>
+						<Link to='/start' className='sublink'> Get Started </Link>
 					</MenuItem>
 				</MenuList>
 			</Paper>
@@ -114,7 +114,7 @@ const Header = () => {
 			<AppBar position='static' className={classes.bar}>
 				<Toolbar>
 					<Typography className={classes.title} variant='h6' noWrap>
-						<Link to='/'>
+						<Link to='/' className='link'>
 							Flowers For You
 						</Link>
 					</Typography>
@@ -153,10 +153,10 @@ const Header = () => {
 								>
 								<Paper>
 									<MenuList autoFocusItem={open} id='menu-list-grow' className={classes.drpdown}>
-										<MenuItem><Link to='/happyOccasions'> Happy </Link></MenuItem>
-										<MenuItem><Link to='/gratitudeOccasions'> Gratitude </Link></MenuItem>
-										<MenuItem><Link to='/loveOccasions'> Love </Link></MenuItem>
-										<MenuItem><Link to='/sympathyOccasions'> Sympathy </Link></MenuItem>
+										<MenuItem><Link to='/happyOccasions' className='sublink'> Happy </Link></MenuItem>
+										<MenuItem><Link to='/gratitudeOccasions' className='sublink'> Gratitude </Link></MenuItem>
+										<MenuItem><Link to='/loveOccasions' className='sublink'> Love </Link></MenuItem>
+										<MenuItem><Link to='/sympathyOccasions' className='sublink'> Sympathy </Link></MenuItem>
 									</MenuList>
 								</Paper>
 								</Grow>
@@ -168,13 +168,9 @@ const Header = () => {
 							Customize your order
 						</Link>
 
-						<a href='/#contact'>
-							<p className='link'> Contact Us </p>
-						</a>
+						<a href='/#contact' className='link'> Contact Us </a>
 						
-						<a href='/#about'>
-							<p className='link'> About Us </p>
-						</a>
+						<a href='/#about' className='link'> About Us </a>
 
 						<Link to ='/start' className='link'>
 							Get Started
@@ -280,7 +276,7 @@ const useStyles = makeStyles((theme) => ({
 	drpdown: {
 		backgroundColor: 'rgb(231, 165, 176)',
 		border: '1px solid rgb(231, 165, 176)',
-		color: 'white'
+		color: 'white',
 	}
   }))
   

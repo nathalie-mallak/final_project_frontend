@@ -15,9 +15,28 @@
 	font-size: 15px;
 }
 
+.link 
+{
+	color: white;
+}
+
+.sublink
+{
+	color: white;
+}
+
 .link:hover
 {
 	color: rgb(231, 165, 176);
 	transform: scale(1.05);
-	cursor: pointer
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.sublink:hover
+{
+	color: white;
+	transform: scale(1.05);
+	cursor: pointer;
+	text-decoration: none;
 }
