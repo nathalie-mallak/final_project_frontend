@@ -4,6 +4,7 @@ import AboutUs from '../aboutUs/aboutUs'
 import Header from '../header/header'
 import Slider from '../carousel/carousel'
 import Footer from '../footer/footer'
+import Group from '../cards/group'
 
 const Home = () => {
 	return (
@@ -12,6 +13,10 @@ const Home = () => {
 
 			<section id='Carousel'>
 				<Slider/>
+			</section>
+
+			<section>
+				<Group/>
 			</section>
 
 			<section id='about'>

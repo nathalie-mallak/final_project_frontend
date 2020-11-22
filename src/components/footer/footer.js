@@ -20,14 +20,14 @@ export default function Footer() {
                         <div className="col w-100 h-100 d-flex justify-content-around align-items-center">
                             <>
                             <p>
-                            <MailIcon className="icons"/>
+                            <a href="mailto:Raafatnasrdine@gmail.com"><MailIcon className="icons"/></a>
                         
                             </p>
                             <p>
-                            <PhoneInTalkIcon className="icons"/>
+                            <a href="tel:+96176674225"><PhoneInTalkIcon className="icons"/></a>
                             </p>
                             <p>
-                            <LinkedInIcon className="icons"/>
+                           <a href="https://www.linkedin.com/in/raafat-nasrldine"><LinkedInIcon className="icons"/></a> 
                             </p>
                             </>
                         </div>
@@ -41,14 +41,14 @@ export default function Footer() {
                         <div className="col w-100 h-100 d-flex justify-content-around align-items-center">
                             <>
                             <p>
-                            <MailIcon className="icons"/> 
+                            <a href="mailto:nathalie.mallak@gmail.com"><MailIcon className="icons"/></a>
                         
                             </p>
                             <p>
-                            <PhoneInTalkIcon className="icons"/>
+                            <a href="tel:+96176466567"><PhoneInTalkIcon className="icons"/></a>
                             </p>
                             <p>
-                            <LinkedInIcon className="icons"/>
+                            <a href="https://www.linkedin.com/in/nathalie-mallak"><LinkedInIcon className="icons"/></a> 
                             </p>
                             </>
                         </div>
@@ -80,7 +80,7 @@ export default function Footer() {
             
             </div>
             <div  id="copyright">
-                <p>Welcome To Our Gorgeous FlowerShop<br/><CopyrightIcon/>2020</p>
+                <p>Welcome To Our Gorgeous FlowerShop<CopyrightIcon/></p>
                 
             </div>
        </>
