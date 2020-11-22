@@ -60,6 +60,8 @@ const Login = props => {
 	return (
 		<>
 			<form onSubmit={submitHandler} className='container'>
+
+				<p className='formTitle'> Sign In </p>
 				
 				<TextField className={classes.textField} label='Email' type='email' name='email' value={email} onChange={handleEmail} variant='outlined' required/>
 
@@ -87,7 +89,8 @@ const Login = props => {
 				<Buttons 
 					type='submit' 
 					text= 'Sign In'
-					backgroundColor= 'pink'
+					backgroundColor= 'rgb(243, 162, 176)'
+					color='#63393c'
 					disabled={email === '' || values.password === ''}
 				/> 
 			</form>

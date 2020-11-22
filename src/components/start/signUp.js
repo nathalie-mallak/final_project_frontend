@@ -16,6 +16,7 @@ import OutlinedInput from '@material-ui/core/OutlinedInput'
 import InputLabel from '@material-ui/core/InputLabel'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import MenuItem from '@material-ui/core/MenuItem'
+import { Typography } from '@material-ui/core'
 
 // TODO: 
 // fix phone number regex
@@ -83,6 +84,8 @@ const SignUp = props => {
 		<>
 			<form onSubmit={submitHandler} className='container'>
 
+				<p className='formTitle'> Create a New Account </p>
+
 				<TextField className={classes.textField} label='First Name' type='text' name='fname' onChange={(e) => {setUserInfo({...userInfo, fname: e.target.value})}} variant='outlined' required/>
 
 				<TextField className={classes.textField} label='Last Name' type='text' name='lname' onChange={(e) => {setUserInfo({...userInfo, lname: e.target.value})}} variant='outlined' required/>
@@ -122,7 +125,9 @@ const SignUp = props => {
 				<Buttons 
 					type='submit' 
 					text= 'Create an Account'
-					backgroundColor= 'pink'
+					backgroundColor= 'rgb(243, 162, 176)'
+					color= '#63393c'
+
 					disabled={userInfo.fname === '' || userInfo.lname === '' || userInfo.email === '' || values.password === '' || userInfo.phone === '' || userInfo.gender === '' || userInfo.dob === ''}
 				/> 
 			</form>

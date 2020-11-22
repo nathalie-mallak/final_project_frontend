@@ -5,7 +5,7 @@ import noteCardReducer from './noteCardReducer'
 import errorReducer from './errorReducer'
 import authReducer from './authReducer'
 import occasionReducer from './occasionReducer'
-
+import searchReducer from './searchReducer'
 // when we have several reducers
 // flower should match the flower in the mapPropToState function
 export default combineReducers({
@@ -14,5 +14,6 @@ export default combineReducers({
 	noteCard: noteCardReducer,
 	error: errorReducer,
 	auth: authReducer,
-	occasion: occasionReducer
+	occasion: occasionReducer,
+	searchText: searchReducer
 })

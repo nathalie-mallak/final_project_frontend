@@ -6,6 +6,7 @@ import { getFlowers, getBaskets, getNoteCard } from '../../actions/customization
 import PropTypes from 'prop-types'
 import Header from '../header/header'
 import Button from '../buttons/buttons'
+import Footer from '../footer/footer'
 
 import { makeStyles } from '@material-ui/core/styles'
 import clsx from 'clsx'
@@ -54,7 +55,7 @@ const Customization = (props) =>
 			<h3> Where Flowers Bloom , So Does Hope </h3>
 			<p> Let's first choose the basket </p>
 
-			<div className='gridContainer'>
+			<div className='gridDiv'>
 				{/* getting the baskets */}
 				{props.baskets.baskets.map( basket => (
 					<Grid container>
@@ -96,7 +97,7 @@ const Customization = (props) =>
 
 			{/* getting the flowers */}
 			{/* flower represents the state object, however flowers represent the array of flowers */}
-			<div className='gridContainer'>
+			<div className='gridDiv'>
 				{props.flowers.flowers.map(flower => {
 					return <Grid container>
 								<Grid item xs={6} sm={6}>	
@@ -143,6 +144,7 @@ const Customization = (props) =>
 					))}
 				</select>
 			</div>
+			<Footer />
 		</>
 	)
 }
