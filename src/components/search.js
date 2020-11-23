@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import SearchIcon from '@material-ui/icons/Search'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import InputBase from '@material-ui/core/InputBase'
 import { fade, makeStyles } from '@material-ui/core/styles'
+import { getSearchText } from '../actions/searchAction'
 
 const Search = props => {
     const classes = useStyles()
@@ -10,16 +13,27 @@ const Search = props => {
 
     const searchHandler = (e) => {
         setSearchText(e.target.value)
-    }
+	}
+
+	Search.propTypes = {
+		getSearchText: PropTypes.func.isRequired,
+		text: PropTypes.object.isRequired
+	}
+
+	// const dynamicSearch = () => {
+	// 	return items.filter(item => item.toLowerCase().includes(searchText.toLowerCase()))
+	// }
+
+	// let filteredItems = props.getFlowers().filter((basket) => {
+	// 	//if value not found
+	// 	return basket.name.indexOf(props.searchText) !== -1
+	// })
 
     useEffect (() => {
 
-        const data ={
-            searchText: searchText
-        }
-
-        props.searchText(data)
-    })
+		props.getSearchText()
+		
+    }, [searchText])
 
     return (
         <>
@@ -38,11 +52,23 @@ const Search = props => {
                 value={searchText}
                 />
 			</div>
+			<ul>
+				{/* {filteredItems.map((item) => {
+					return <Item item={}
+				})} */}
+			</ul>
         </>
     )
 }
 
-export default Search
+const mapStateToProps = state => {
+    const { searchText } = state
+    return {
+       text: searchText
+    }
+}
+
+export default connect(mapStateToProps, { getSearchText }) (Search)
 
 const useStyles = makeStyles((theme) => ({
 	search: {

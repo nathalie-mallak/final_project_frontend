@@ -5,15 +5,17 @@ export const getSearchText = () => dispatch => {
 
     dispatch(setItemsLoading())
 
-    axios
-        .get('/api/searchText')
-        .then(res => {
-            return dispatch({
-                type: SEARCH_TEXT,
-                payload: res.data
-            })
-        })
-        .catch(err => console.log(err))
+//     const queryParams =` ?orderBy='name'&equalTo='${searchText}'`
+
+//     axios
+//         .get(`/api/searchText${queryParams}`)
+//         .then(res => {
+//             return dispatch({
+//                 type: SEARCH_TEXT,
+//                 payload: res.data
+//             })
+//         })
+//         .catch(err => console.log(err))
 }
 
 const setItemsLoading = () => {

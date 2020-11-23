@@ -48,7 +48,7 @@ const Customization = (props) =>
 		props.getNoteCard()
 
 	}, [])
-  
+
 	return (
 		<>
 			<Header/>
