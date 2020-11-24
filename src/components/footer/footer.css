@@ -1,20 +1,20 @@
-
-
 .h4{
     text-align: center;
     font-family: 'Comfortaa', cursive;
     color: white;
 }
 
-#footer{
+.footer
+{
    background-color: #BF5E66 ;
-   margin-top:20px ;
-   background-color: #BF5E66;
+   margin-top: 20px;
+   /* background-color: #BF5E66; */
    height: 100px;
-   padding-bottom: 20px
+   padding: 20px 0px;
 }
 
-.icons{
+.icons
+{
     color:white;
     cursor: pointer;
 }
@@ -23,6 +23,6 @@
     background-color: #BF5E66 ;
     text-align: center;
     color: white;
-    font-size: 12px
+    font-size: 12px;
 }
 

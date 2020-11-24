@@ -8,10 +8,11 @@ import Sympathy from '../occasions/sympathy'
 import Gratitude from '../occasions/gratitude'
 import Customization from '../customization/customization'
 import Admin from '../adminDashboard/Index'
+import search from '../search/searchPage'
 
 export default function main() {
     return (
-        <div>
+        <>
             <Switch>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/admin' component={Admin} />
@@ -21,9 +22,8 @@ export default function main() {
                 <Route exact path='/loveOccasions' component={Love} />
                 <Route exact path='/gratitudeOccasions' component={Gratitude} />
                 <Route exact path='/customization' component={Customization} />
-
-                {/* do we need a dynamic route? yes */}
+                <Route exact path='/searchPage' component={search} />
             </Switch>
-        </div>
+        </>
     )
 }
