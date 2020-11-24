@@ -9,16 +9,16 @@ export default function Group() {
     return (
         <div className="container-fluid d-flex justify-content-center">
           <div className="row">
-                <div className="col-md-3">
+                <div className="col-md-3 sm-6">
                     <Cards imgsrc={Bouquet1} title="sunflower" price="30$"/>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-3 sm-6">
                     <Cards imgsrc={Bouquet2} title="tulips" price="40$"/>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-3 sm-6">
                     <Cards imgsrc={Bouquet3} title="Roses" price="50$"/>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-3 sm-6">
                     <Cards imgsrc={Bouquet4} title="Flowers" price="60$"/>
                 </div>
           </div>

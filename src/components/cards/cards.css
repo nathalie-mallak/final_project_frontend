@@ -1,5 +1,6 @@
 .card{
     width:12rem;
+  
    
 }
 
@@ -9,6 +10,8 @@
 
 .card-body{
     padding: 3rem 0 !important;
+    padding-top:1rem !important ;
+    height: 11rem;
    
 }
 
