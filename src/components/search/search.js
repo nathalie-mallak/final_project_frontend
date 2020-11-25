@@ -1,39 +1,65 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import SearchIcon from '@material-ui/icons/Search'
-import { connect } from 'react-redux'
-import PropTypes from 'prop-types'
 import InputBase from '@material-ui/core/InputBase'
 import { fade, makeStyles } from '@material-ui/core/styles'
-import { getSearchText } from '../actions/searchAction'
+import Nat from './nat'
+import axios from 'axios'
 
 const Search = props => {
-    const classes = useStyles()
 
-    const [searchText, setSearchText] = useState('')
+	const { loadHandler } = props
+
+	const classes = useStyles()
+	
+	const inputRef = useRef()
+
+	const [ inputValue, setInputValue] = useState('')
 
     const searchHandler = (e) => {
-        setSearchText(e.target.value)
+        setInputValue(e.target.value)
 	}
 
-	Search.propTypes = {
-		getSearchText: PropTypes.func.isRequired,
-		text: PropTypes.object.isRequired
-	}
+	// const names = ['Hi', 'hey', 'hello']
 
 	// const dynamicSearch = () => {
-	// 	return items.filter(item => item.toLowerCase().includes(searchText.toLowerCase()))
+	// 	return getFlowers.filter(item => item.toLowerCase().includes(inputValue.toLowerCase()))
 	// }
 
-	// let filteredItems = props.getFlowers().filter((basket) => {
-	// 	//if value not found
-	// 	return basket.name.indexOf(props.searchText) !== -1
-	// })
+	useEffect (() => 
+	{
+		let timer = setTimeout(() => {
 
-    useEffect (() => {
+			if(inputValue !== inputRef.current.value)  
+			{
+				return;
+			}
 
-		props.getSearchText()
-		
-    }, [searchText])
+			const {searchText} = props.match.params 
+
+			axios
+				.get(`/api/searchItems/${searchText}`)
+				.then((searchData) => {
+
+					let responseKeys = Object.keys(searchData)
+					let finalItems = []
+			
+					responseKeys.forEach(key => {
+						const item = {
+							id: key,
+							name: searchData[key].name,
+						}
+						finalItems.push(item)
+					})
+					console.log(finalItems)
+				loadHandler(finalItems)
+			})
+		}, 500)
+
+		return () => {
+			clearTimeout(timer);
+		}
+
+    }, [inputValue, loadHandler, inputRef])
 
     return (
         <>
@@ -42,33 +68,23 @@ const Search = props => {
                     <SearchIcon />
                 </div>
                 <InputBase
-                placeholder='Search…'
-                classes={{
-                    root: classes.inputRoot,
-                    input: classes.inputInput,
-                }}
-                inputProps={{ 'aria-label': 'search' }}
-                onChange={searchHandler}
-                value={searchText}
-                />
+					placeholder='Search…'
+					classes={{
+						root: classes.inputRoot,
+						input: classes.inputInput,
+					}}
+					inputProps={{ 'aria-label': 'search' }}
+					onChange={searchHandler}
+					value={inputValue}
+					ref={inputRef}
+				/>
 			</div>
-			<ul>
-				{/* {filteredItems.map((item) => {
-					return <Item item={}
-				})} */}
-			</ul>
+				{/* <Nat names={dynamicSearch()} /> */}
         </>
     )
 }
 
-const mapStateToProps = state => {
-    const { searchText } = state
-    return {
-       text: searchText
-    }
-}
-
-export default connect(mapStateToProps, { getSearchText }) (Search)
+export default Search
 
 const useStyles = makeStyles((theme) => ({
 	search: {

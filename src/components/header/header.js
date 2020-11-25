@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './header.css'
 import { Link } from 'react-router-dom'
-import Search from '../search'
+import Search from '../search/search'
 
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
