@@ -35,7 +35,7 @@ const GratitudeOccasions = props => {
 					<CardHeader title={occasion.name}/>
 					<CardMedia
 						className={classes.media}
-						image={occasion.image}
+						image={occasion.imgUrl}
 					/>
 					<p price={occasion.price}> </p>
 					<Button> Buy Now </Button>

@@ -4,15 +4,6 @@
     color: white;
 }
 
-.footer
-{
-   background-color: #BF5E66 ;
-   margin-top: 20px;
-   /* background-color: #BF5E66; */
-   height: 100px;
-   padding: 20px 0px;
-}
-
 .icons
 {
     color:white;
@@ -20,7 +11,6 @@
 }
 
 #copyright{
-    background-color: #BF5E66 ;
     text-align: center;
     color: white;
     font-size: 12px;

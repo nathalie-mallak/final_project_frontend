@@ -93,11 +93,7 @@ const Header = () => {
 					</MenuItem>
 
 					<MenuItem>
-						<a href='/#contact' className='sublink'> Contact Us</a>
-					</MenuItem>
-
-					<MenuItem>
-						<a href='/#about' className='sublink'> About Us </a>
+						<Link to='/about' className='sublink'> Our Shop </Link>
 					</MenuItem>
 
 					<MenuItem>
@@ -169,10 +165,8 @@ const Header = () => {
 							Customize your order
 						</Link>
 
-						<a href='/#contact' className='link'> Contact Us </a>
+						<Link to='/about' className='link'> Our Shop </Link>
 						
-						<a href='/#about' className='link'> About Us </a>
-
 						<Link to ='/start' className='link'>
 							Get Started
 						</Link>
