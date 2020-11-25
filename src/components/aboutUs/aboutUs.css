@@ -1,11 +1,40 @@
-.word-rotate.active
+h3, h5
 {
-    visibility: visible;
-    width: auto;
+    color:  #BF5E66
 }
 
-.word-rotate .word-rotate-items
+.span
 {
-    position: relative;
-    width: 100%;
+    font-family: 'Comfortaa', cursive;
+    color: #BF5E66;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.quote
+{
+    font-family: 'Comfortaa', cursive;
+    color:  #332d2dda;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.p
+{
+    line-height: 30px;
+    color:  #4e4242da
+}
+
+.infoContainer
+{
+    line-height: 40px;
+    border-left: 2px solid #BF5E66;
+    padding-left: 30px;
+}
+
+.subDiv
+{
+	line-height: 30px;
+	margin: 18px 0px;
 }

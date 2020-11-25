@@ -7,6 +7,7 @@ import PropTypes from 'prop-types'
 import Header from '../header/header'
 import Footer from '../footer/footer'
 import Search from '../search/search'
+import Custom from './gridsystem'
 
 const Customization = props => 
 {
@@ -34,31 +35,33 @@ const Customization = props =>
 
 	return (
 		<>
-			<Header/>
+		<Header/>
+		<Custom/>
+			{/* <Header/>
 			<Search loadHandler={loadItemsHandler} />
 
 			<h3> Where Flowers Bloom , So Does Hope </h3>
-			<p> Let's first choose the basket </p>
+			<p> Let's first choose the basket </p> */}
 
 			{/* getting the baskets */}
-			{props.baskets.baskets.map( basket => (
+			{/* {props.baskets.baskets.map( basket => (
 				<div> {basket.name} </div>
-			))}
+			))} */}
 
 			{/* getting the flowers */}
 			{/* flower represents the state object, however flowers represent the array of flowers */}
-			{props.flowers.flowers.map(flower => {
+			{/* {props.flowers.flowers.map(flower => {
 				return <div> {flower.price} </div>
-			})}
+			})} */}
 		
-			<p> Let's now choose the flower arragement </p>
+			{/* <p> Let's now choose the flower arragement </p>
 			<div className='designContainer'>
 				<select>
 					{SelectFlowers.map((item) => (
 						<option>{item}</option>
 					))}
 				</select>
-			</div>
+			</div> */}
 			<Footer />
 		</>
 	)

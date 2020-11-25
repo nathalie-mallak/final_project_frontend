@@ -18,7 +18,7 @@ export default function Slider() {
               <Carousel.Item>
               <img className='d-block w-100 ' src ={Slider1} alt='first image' style={{ height:'70vh' }}/>
                   <Carousel.Caption>
-                     <h3 style={{ color:'red' }}>Flowers for you</h3>
+                     <h3 style={{ color:'gold' }}>Flowers for you</h3>
                   </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
