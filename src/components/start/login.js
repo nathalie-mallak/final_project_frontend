@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Buttons from '../buttons/buttons'
+import { useHistory } from 'react-router-dom'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { login } from '../../actions/authActions'
@@ -19,6 +19,7 @@ import InputAdornment from '@material-ui/core/InputAdornment'
 const Login = props => {
 
 	const classes = useStyles()
+	const history = useHistory()
 
 	// to precise types
 	Login.propTypes = {
@@ -53,8 +54,17 @@ const Login = props => {
 			email: email,
 			password: values.password
 		}
+		
 		// attempt to login
 		props.login(data)
+	}
+
+	const loginHandler = () => {
+		const { isAuthenticated } = props
+
+		if(isAuthenticated) {
+			history.push('/')
+		}
 	}
 
 	return (
@@ -86,13 +96,14 @@ const Login = props => {
 					/>
 				</FormControl>
 
-				<Buttons 
+				<button
 					type='submit' 
-					text= 'Sign In'
-					backgroundColor= 'rgb(243, 162, 176)'
-					color='#63393c'
+					className='buttonStyle'
 					disabled={email === '' || values.password === ''}
-				/> 
+					onClick={loginHandler}
+				>
+					Sign In
+				</button> 
 			</form>
 		</>
 	)

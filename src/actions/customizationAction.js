@@ -1,5 +1,6 @@
-import { GET_FLOWERS, GET_BASKETS, GET_NOTECARD, ITEMS_LOADING } from './types'
+import { GET_FLOWERS, GET_BASKETS, ITEMS_LOADING } from './types'
 import axios from 'axios'
+import { returnErrors} from './errorActions'
 
 export const getFlowers = () => dispatch => {
 
@@ -14,9 +15,8 @@ export const getFlowers = () => dispatch => {
 				payload: res.data
 			})
 		})
-		.catch((err) => {
-			console.log(err)
-		})
+		.catch((err) => dispatch(returnErrors(err.response.data, error.response.status))
+		)
 }
 
 export const getBaskets = () => dispatch => {
@@ -31,27 +31,9 @@ export const getBaskets = () => dispatch => {
 				payload: res.data
 			})
 		})
-		.catch(err => {
-			console.log(err)
-		})
+		.catch((err) => dispatch(returnErrors(err.response.data, error.response.status))
+		)
 }
-
-export const getNoteCard = () => dispatch => {
-
-	dispatch(setItemsLoading())
-
-	axios
-		.get('/api/items/noteCards')
-		.then(res => {
-			dispatch ({
-				type: GET_NOTECARD,
-				payload: res.data
-			})
-		})
-		.catch(err => {
-			console.log(err)
-		})
-} 
 
 export const setItemsLoading = () => {
 	return {

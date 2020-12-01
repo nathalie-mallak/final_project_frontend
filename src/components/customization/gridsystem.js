@@ -11,18 +11,9 @@ const Custom = () =>{
 					<Cont/>
 				</Grid>
 				<Grid Item xs={0} sm={2} md={2}></Grid>
-
-				
 			</Grid>
-			
-	
 		</Grid> 
-	);
+	)
+}
 
-
-};
-
-
-
-
-export default Custom;
+export default Custom

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import Buttons from '../buttons/buttons'
@@ -16,7 +17,6 @@ import OutlinedInput from '@material-ui/core/OutlinedInput'
 import InputLabel from '@material-ui/core/InputLabel'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import MenuItem from '@material-ui/core/MenuItem'
-import { Typography } from '@material-ui/core'
 
 // TODO: 
 // fix phone number regex
@@ -25,6 +25,7 @@ import { Typography } from '@material-ui/core'
 const SignUp = props => {
 
 	const classes = useStyles()
+	const history = useHistory()
 
 	SignUp.prototypes = {
 		register: PropTypes.func.isRequired,
@@ -75,9 +76,20 @@ const SignUp = props => {
 			dob: selectedDate
 		}
 
+		console.log(data)
+		console.log('nat');
+
 		// const data ={...userInfo,...values};
 		props.register(data)
 		// when created, we have to login --> dispatch login
+	}	
+
+	const registerHandler = () => {
+		const { isAuthenticated } = props
+
+		if(isAuthenticated) {
+			history.push('/')
+		}
 	}
 
 	return (
@@ -122,14 +134,13 @@ const SignUp = props => {
 
 				<TextField className={classes.textField} label='Phone Number' type='text' name='phone' onChange={(e) => {setUserInfo({...userInfo, phone: e.target.value})}} variant='outlined' required/>
 
-				<Buttons 
+				<button
 					type='submit' 
-					text= 'Create an Account'
-					backgroundColor= 'rgb(243, 162, 176)'
-					color= '#63393c'
-
-					disabled={userInfo.fname === '' || userInfo.lname === '' || userInfo.email === '' || values.password === '' || userInfo.phone === '' || userInfo.gender === '' || userInfo.dob === ''}
-				/> 
+					className='buttonStyle'
+					disabled={userInfo.fname === '' || userInfo.lname === '' || userInfo.email === '' || values.password === '' || userInfo.phone === '' || userInfo.gender === '' || userInfo.dob === ''}		onClick={registerHandler}
+				>
+					Create an Account
+				</button>
 			</form>
 		</>
 	)
