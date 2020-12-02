@@ -14,9 +14,20 @@ import MenuItem from '@material-ui/core/MenuItem'
 import MenuList from '@material-ui/core/MenuList'
 import MoreIcon from '@material-ui/icons/MoreVert'
 import IconButton from '@material-ui/core/IconButton'
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import Menu from '@material-ui/core/Menu'
+import Flower from '../../flower'
+
 
 const Header = () => {
+	const [cart , setCart] = useState([]);
+	const addToCart = (Flower) =>{
+		console.log('add to cart is successfully done')
+		setCart([...cart,Flower]);
+	  }
+
+	
+	
 	const classes = useStyles()
 
 	const [open, setOpen] = useState(false)
@@ -99,6 +110,9 @@ const Header = () => {
 					<MenuItem>
 						<Link to='/start' className='sublink'> Get Started </Link>
 					</MenuItem>
+					<MenuItem>
+						<Link to='/Basket' className='sublink'> <AddShoppingCartIcon/> </Link>
+					</MenuItem>
 				</MenuList>
 			</Paper>
 		</Menu>
@@ -169,6 +183,9 @@ const Header = () => {
 						
 						<Link to ='/start' className='link'>
 							Get Started
+						</Link>
+						<Link to ='/Basket' className='link'>
+						<AddShoppingCartIcon/>({cart.length})
 						</Link>
 					</div>
 

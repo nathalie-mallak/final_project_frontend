@@ -10,15 +10,20 @@ import Gratitude from '../occasions/gratitude'
 import Customization from '../customization/customization'
 import Admin from '../adminDashboard/Index'
 import item from '../occasions/addNewItem'
+import Basket from '../cart/cart'
+
 
 export default function main() {
-    return (
+  
+    
+        return (
         <>
             <Switch>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/about' component={About} />
                 <Route exact path='/admin' component={Admin} />
                 <Route exact path='/start' component={Start} />
+                <Route exact path='/Basket' component={Basket} />
                 <Route exact path='/sympathyOccasions' component={Sympathy} />
                 <Route exact path='/happyOccasions' component={Happy} />
                 <Route exact path='/loveOccasions' component={Love} />
