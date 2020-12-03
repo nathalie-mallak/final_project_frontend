@@ -1,0 +1,307 @@
+/*!
+ * Yamm!3 - Yet another megamenu for Bootstrap 3
+ * http://geedmo.github.com/yamm3
+ * 
+ * @geedmo - Licensed under the MIT license
+ */
+ 
+ 
+ .dropdown-menu .container {
+	 width:auto !important;
+ }
+ 
+ 
+ #main-menu  .current_page_item a{
+	 position:relative;
+ }
+ 
+#main-menu  .current_page_item a:after{
+  content: '';
+  display: inline-block;
+  width: 100%;
+  border-bottom: 3px solid #fff;
+  position: absolute;
+  bottom: -13px;
+  left: 2px;
+	 
+ }
+ 
+  #main-menu >  .current_page_ancestor a{
+	 position:relative;
+ }
+ 
+#main-menu >  .current_page_ancestor a:after{
+  content: '';
+  display: inline-block;
+  width: 100%;
+  border-bottom: 3px solid #fff;
+  position: absolute;
+  bottom: -13px;
+  left: 2px;
+	 
+ }
+ 
+ 
+ #main-menu  ul a:after,#main-menu:hover .current_page_ancestor a:after{
+	 display:none !important;
+ }
+ 
+ 
+.yamm  .navbar-nav ul > li {
+  list-style:none;
+}
+
+
+.header  .menu-item-has-children {
+	  
+	  margin-right:15px;
+  }
+  
+  
+  .header .menu-item-has-children .menu-item-has-children  {
+  margin-right: 0px;
+}
+ 
+ 
+.header   .dropdown-menu ul  li:hover  .dropdown-menu{
+	 display:block !important;
+ }
+ 
+    
+.header   .dropdown-menu   li:hover .dropdown-menu{
+  display: block !important;
+}
+
+.dropdown-menu  .dropdown-menu{
+  display: none !important;
+  position: absolute !important;
+  left: 100% !important;
+  top: 0 !important;
+
+}
+
+.header .menu-item-has-children  .menu-item-has-children> a:after{
+  right: 15px;	
+    top: 6px;
+}
+.header .yamm .navbar-nav ul > li {
+  position: relative;
+}
+
+.header .menu-item-has-children > a:after{
+	  font-family: 'FontAwesome';
+  content: "\f107";
+  font-weight: normal;
+  font-style: normal;
+  display: block;
+  position: absolute;
+  right: -9px;
+  top: 10px;
+	 
+ }
+.header.sticky .top-nav {
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index:888;
+}
+.header.sticky .top-nav .yamm {
+	top: 30px !important;
+}
+#search-global-menu {
+	float: right;
+	margin: 15px 20px 0 0;
+	padding: 0 10px 0 0;
+	border: 1px solid transparent;
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+#search-global-menu input {
+	border: none;
+	background: none;
+	color: #fff !important;
+	padding-right: 0px;
+	outline: none !important;
+}
+#search-global-menu:hover, #search-global-menu:focus {
+	border: 1px solid #fff;
+}
+#search-global-menu button, #search-global-mobile button {
+	border: none;
+	background: none;
+	color: #fff;
+}
+.yamm {
+  background: none repeat scroll 0 0 #ffc300;
+  border: 0 none;
+  float: none;
+  margin-bottom: 0;
+  margin-top: -30px;
+  min-height: auto;
+  padding-left: 20px;
+  position: relative;
+  top: 40px;
+  z-index: 777;
+  height: 68px;
+	min-height:inherit !important;
+}
+
+
+
+
+.yamm .navbar-collapse {
+	padding-left: 0;
+	padding-right: 0;
+}
+.yamm .navbar-brand {
+	color: #fff;
+	float: left;
+	font-size: 24px;
+	font-weight: 700;
+	height: 50px;
+	line-height: 21px;
+	padding: 14.5px 15px;
+	text-transform: uppercase;
+}
+.yamm .nav > li > a {
+	color: #fff;
+	display: block;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 15px;
+	font-weight: 900;
+
+  margin: 14px 0;
+  padding: 10px ;
+	position: relative;
+	text-transform: uppercase;
+	-webkit-transition: all .1s ease-out;
+	-moz-transition: all .1s ease-out;
+	-ms-transition: all .1s ease-out;
+	-o-transition: all .1s ease-out;
+	transition: all .1s ease-out;
+}
+.yamm .dropdown.full-width .dropdown-menu {
+	left: 0;
+	right: 0;
+}
+.full-width {
+	position: inherit !important;
+}
+.navbar-nav > li {
+	float: left;
+}
+.yamm .nav li a {
+	/*-webkit-transition: all .1s ease-out;
+	-moz-transition: all .1s ease-out;
+	-ms-transition: all .1s ease-out;
+	-o-transition: all .1s ease-out;
+	transition: all .1s ease-out;*/
+}
+.yamm .nav > li:hover > a {
+	color: #fff;
+}
+.yamm .navbar-toggle {
+background: #333333 none repeat scroll 0 0;
+}
+.yamm .navbar-toggle .icon-bar {
+	background: #fff;
+}
+.popover-box {
+	float: right;
+	margin-left: 10px;
+}
+.yamm .nav, .yamm .collapse, .yamm .dropup, .yamm .dropdown {
+	position: static;
+}
+.yamm .container {
+	position: relative;
+}
+.yamm .dropdown-menu {
+	left: auto;
+}
+.yamm .full-width .dropdown-menu {
+	left: 0;
+}
+.yamm .full-width  .dropdown-menu {
+	padding: 20px 30px;
+}
+.yamm .dropdown.full-width .dropdown-menu {
+	left: 0;
+	right: 0;
+}
+
+
+.yamm .dropdown.full-width  li{
+	position:relative;
+}
+
+
+.yamm .dropdown.full-width  ul ul li:before {
+	    font-family: FontAwesome;
+		content:'';
+		display:block;
+  content: "\f105";
+  position:absolute;
+  left:0;
+ top: 3px;
+  color:#aaaaaa;
+}
+.nav-tabs {
+	display: inline-block;
+	border-bottom: none;
+	padding-top: 15px;
+	font-weight: bold;
+}
+.nav-tabs > li > a, .nav-tabs > li > a:hover, .nav-tabs > li > a:focus, .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+}
+.nav-list {
+	border-bottom: 1px solid #eee;
+}
+.nav-list > li {
+	padding: 20px 15px 15px;
+	border-left: 1px solid #eee;
+}
+.nav-list > li:last-child {
+	border-right: 1px solid #eee;
+}
+.nav-list > li > a:hover {
+	text-decoration: none;
+}
+.nav-list > li > a > span {
+	display: block;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.mega-dropdown {
+	position: static !important;
+}
+.mega-dropdown-menu {
+	padding: 20px 15px 15px;
+	text-align: center;
+	width: 100%;
+	left: 0 !important;
+}
+
+@media (max-width:480px) {
+html .yamm .dropdown-menu {
+    position: relative;
+	   top: 0;
+}
+
+}
+
+
+html .yamm .nav {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  padding-right: 20px;
+}
+
+html .yamm .nav .hot a{
+	border:1px dashed #fff;
+}

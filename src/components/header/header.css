@@ -5,7 +5,6 @@
 	text-decoration: none;
 	padding: 0;
 	margin: 0;
-	
 }
 
 .linksDiv
@@ -13,7 +12,7 @@
 	display: flex;
 	justify-content: space-evenly;
 	width: 60%;
-	font-size: 15px;
+	font-size: 17px;
 }
 
 .link 
@@ -37,11 +36,16 @@
 .sublink:hover
 {
 	color: white;
-	transform: scale(1.05);
+	transform: scale(1.09);
 	cursor: pointer;
 	text-decoration: none;
 }
 
 .dropdown{
 	z-index: 10;
+}
+#logo{
+	height: 30px;
+	width: 30px;
+	transform: translate(20px,-4px)
 }

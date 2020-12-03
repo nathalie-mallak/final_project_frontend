@@ -1,0 +1,201 @@
+/* ************************************************   
+Theme Name: Proagency
+Author: Templines
+Version: 1.3
+License: See on zip package
+License URI: See on zip package
+Description: Pro Agency is a Multi-Concept and Multipurpose Design suitable for any kind of website or business. It features 5 concepts which includes Auto Repair & Service, Cleaning, Construction, Gardening & Lawn and Transport & Delivery but it can be used for any other website or business also. 
+Theme URI:  templines.com
+Author URI: templines.com
+Tags: blue , orange , white 
+*/
+
+
+
+/*Google fonts*/
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic&subset=latin,vietnamese,latin-ext);
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:300,700,400&subset=latin,cyrillic-ext,cyrillic,greek-ext,greek,vietnamese,latin-ext);
+
+
+@import url('debugging.css');
+
+/*WORDPRESS*/
+
+
+#wp-calendar {
+	width: 100%;
+}
+#wp-calendar td, #wp-calendar th {
+ border: 1px solid #eee;
+    padding: 5px;
+    text-align: center;
+}
+/*WIDGETS*/
+
+
+.sidebar .block_content ul li ul {
+	margin-left: 25px;
+}
+.block_content ul li {
+	display: inline-block;
+	list-style: outside none none;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 100%;
+}
+.block_content ul {
+	margin: 0;
+	padding: 0;
+	color: #888888;
+	font-size: 14px;
+}
+.block_content ul li {
+	display: inline-block;
+	list-style: outside none none;
+	width: 100%;
+}
+.block_content a {
+	color: #888888;
+	font-size: 14px;
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+
+
+
+
+
+/*CAPTION*/
+
+
+.wp-caption {
+	max-width: 100%;
+	list-style: none;
+	background: none;
+}
+.wp-caption-text {
+	list-style: none;
+	padding: 10px;
+	background: none;
+}
+.gallery-caption {
+	list-style: none;
+	background: none;
+}
+.bypostauthor {
+	list-style: none;
+	background: none;
+}
+.sidebar .block_content img {
+	height: auto;
+	margin: 10px 0 10px;
+	max-width: 100%;
+}
+/*TAGS*/
+
+aside .wp-tag-cloud {
+  margin-left: -5px !important;
+  display: inline-block;
+}
+aside .tagcloud li {
+	float: left;
+  margin: 1px 3px!important;
+  width: auto;
+}
+aside .tagcloud {
+	clear: both;
+}
+aside .tagcloud li a {
+	display: block;
+	text-transform: none;
+	font-size: 14px!important;
+	padding: 5px 8px !important;
+	text-decoration: none!important
+}
+
+.sidebar .tagcloud li:hover a {
+	color: #fff!important
+}
+/*RSS*/
+
+.rsswidget img {
+	position: relative;
+	top: -2px;
+	margin-right: 5px !important;
+}
+.rssSummary {
+  background: none repeat scroll 0 0 #999999;
+    color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+}
+.sidebar .menu .dropdown-menu {
+	display: none !important;
+}
+/*TABS WIDJETS*/
+
+#pop img , #rec img{
+	width:100%;
+	max-width:inherit;
+}
+
+aside .nav-tabs li {
+  margin: 0 !important;
+    padding: 0;
+    width: 30% !important;
+}
+aside .nav-tabs li a {
+  padding: 10px 5px !important;
+  text-align: center;
+  border: none;
+  font-weight: normal;
+  color: #888888;
+}
+aside .nav-tabs {
+	margin-bottom: 15px;
+}
+aside .nav-tabs li.active a {
+  border: none !important;
+  color: #333;
+}
+aside .icon-calendar {
+	margin-right: 7px;
+	font-size: 12px;
+}
+.block_content .media-heading a {
+	color: #333333;
+}
+
+.media-tab-comment{
+	margin-bottom:15px;
+}
+
+.media-tab-comment img{
+  margin: 0 20px 10px 0 !important;
+	
+}
+
+.media-tab-comment .media-body {
+  background: #f4f4f4 !important;
+  padding: 10px;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////*/
+/* Debugged CSS  */
+/*//////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/**/
+
+.carousel-3 .carousel-item-content {
+    display: inline-block;
+    position: relative;
+    text-transform: none !important;
+    vertical-align: top;
+    width: 47%;
+}

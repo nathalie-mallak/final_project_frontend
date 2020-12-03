@@ -17,6 +17,7 @@ import OutlinedInput from '@material-ui/core/OutlinedInput'
 import InputLabel from '@material-ui/core/InputLabel'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import MenuItem from '@material-ui/core/MenuItem'
+import Paper from '@material-ui/core/Paper'
 
 // TODO: 
 // fix phone number regex
@@ -94,6 +95,7 @@ const SignUp = props => {
 
 	return (
 		<>
+			<Paper elevation={3} className={classes.paper} >
 			<form onSubmit={submitHandler} className='container'>
 
 				<p className='formTitle'> Create a New Account </p>
@@ -142,6 +144,7 @@ const SignUp = props => {
 					Create an Account
 				</button>
 			</form>
+			</Paper>
 		</>
 	)
 }
@@ -159,4 +162,7 @@ const useStyles = makeStyles(() => ({
 	textField: {
 		marginBottom: '15px',
 	},
+	paper: {
+		padding: '20px 0px'
+	}
 }))

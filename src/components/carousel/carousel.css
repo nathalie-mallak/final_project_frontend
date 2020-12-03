@@ -1,0 +1,32 @@
+.carouselBody
+{
+    top:-20px;
+    width: 90%;
+    justify-content: center;
+    margin: auto
+}
+
+.slider1
+{
+    color: rgb(153, 27, 27) !important;
+    bottom: 70% !important;
+    word-wrap: break-word;
+    width: 320px;
+    font-size: 25px;
+}
+
+.slider2
+{
+    color: rgb(204, 79, 89) !important;
+    bottom: 60% !important;
+    left: 60% !important;
+    word-wrap: break-word;
+    width: 350px;
+    font-size: 25px;
+}
+
+.slider3
+{
+    color: rgb(204, 79, 89) !important;
+    font-size: 25px;
+}

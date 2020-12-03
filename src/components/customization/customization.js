@@ -33,12 +33,15 @@ const Customization = props =>
 	return (
 		<>
 		<Header/>
-		<Custom/>
+		<div className='background'>
+			
 			{/* <Header/>
-			<Search loadHandler={loadItemsHandler} />
+			<Search loadHandler={loadItemsHandler} /> */}
 
-			<h3> Where Flowers Bloom , So Does Hope </h3>
-			<p> Let's first choose the basket </p> */}
+			<p className='flowersTitle'> Where Flowers Bloom, So Does Hope </p>
+			<p className='options'> Let's first choose the flower arragement </p> 
+			<Custom/>
+		</div>
 
 			{/* getting the baskets */}
 			{/* {props.baskets.baskets.map( basket => (

@@ -35,9 +35,10 @@ const LoveOccasions = props => {
 					<CardHeader title={occasion.name}/>
 					<CardMedia
 						className={classes.media}
-						image={occasion.image}
+						// image=
 					/>
-					<p price={occasion.price}> </p>
+					{occasion.imgUrl}
+					<p> {occasion.price} </p>
 					<Button> Buy Now </Button>
 				</Card>
 			))}

@@ -23,7 +23,7 @@ export const loadUser = () => (dispatch, getState) => {
 }
 
 // register user
-export const register = (data) => dispatch => {
+export const register = (info) => dispatch => {
  
     //headers
     const config = {
@@ -33,12 +33,12 @@ export const register = (data) => dispatch => {
     }
 
     axios
-        .post('/api/userRegister', data, config)
+        .post('/api/userRegister', info, config)
         .then(res => (
-            console.log(res.data),
+            console.log(res),
             dispatch ({
                 type: REGISTER_SUCCESS,
-                payload: res.data
+                payload: {res}
             })
         ))
         .catch(err =>
@@ -51,8 +51,6 @@ export const register = (data) => dispatch => {
 
 // login user
 export const login = (info) => dispatch => {
-
-    dispatch(logout())
 
     // headers
     const config = {
