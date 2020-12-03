@@ -15,8 +15,7 @@ export const getFlowers = () => dispatch => {
 				payload: res.data
 			})
 		})
-		.catch((err) => dispatch(returnErrors(err.response.data, error.response.status))
-		)
+		.catch((err) => console.log(err))
 }
 
 export const getBaskets = () => dispatch => {
@@ -31,8 +30,8 @@ export const getBaskets = () => dispatch => {
 				payload: res.data
 			})
 		})
-		.catch((err) => dispatch(returnErrors(err.response.data, error.response.status))
-		)
+		.catch((err) => console.log(err))
+		
 }
 
 export const setItemsLoading = () => {
