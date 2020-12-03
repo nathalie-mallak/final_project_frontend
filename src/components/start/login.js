@@ -15,6 +15,7 @@ import IconButton from '@material-ui/core/IconButton'
 import OutlinedInput from '@material-ui/core/OutlinedInput'
 import InputLabel from '@material-ui/core/InputLabel'
 import InputAdornment from '@material-ui/core/InputAdornment'
+import Paper from '@material-ui/core/Paper'
 
 const Login = props => {
 
@@ -69,6 +70,7 @@ const Login = props => {
 
 	return (
 		<>
+		<Paper elevation={3} className={classes.paper} >
 			<form onSubmit={submitHandler} className='container'>
 
 				<p className='formTitle'> Sign In </p>
@@ -105,6 +107,7 @@ const Login = props => {
 					Sign In
 				</button> 
 			</form>
+			</Paper>
 		</>
 	)
 }
@@ -122,4 +125,7 @@ const useStyles = makeStyles(() => ({
 		marginBottom: '15px',
 		fontSize: '11px'
 	},
+	paper: {
+		padding: '20px 0px'
+	}
   }))

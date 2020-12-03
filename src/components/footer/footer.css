@@ -1,6 +1,7 @@
-.h4{
+.h4
+{
     text-align: center;
-    font-family: 'Comfortaa', cursive;
+    font-family: Comfortaa, cursive;
     color: white;
 }
 
@@ -14,5 +15,14 @@
     text-align: center;
     color: white;
     font-size: 12px;
+}
+
+.footer 
+{
+    background-color: #BF5E66;
+    width: 99%;
+    padding: 15px 0px 2px;
+    margin-bottom: -13px;
+    margin-top: 25px
 }
 

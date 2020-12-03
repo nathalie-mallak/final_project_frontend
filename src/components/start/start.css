@@ -1,11 +1,8 @@
 .gridContainer 
 {
-	background-image: url('../../image/pink10.jpg');
-	background-size: 85rem ;
-	background-repeat: no-repeat;
-	background-position: center;
 	padding: 60px 0px;
-	margin-top: -20px
+	margin-top: -20px;
+	background-color: #e2cec5;
 }
 
 .container
@@ -27,6 +24,6 @@
 	border: 1px solid #eee;
 	border-radius: 10px;
 	padding: 10px;
-	background-color: rgb(243, 162, 176);
-	color: #63393c
+    background-color: #BF5E66;
+	color: white
 }

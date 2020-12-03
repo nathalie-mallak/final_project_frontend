@@ -18,6 +18,8 @@ import MenuList from '@material-ui/core/MenuList'
 import MoreIcon from '@material-ui/icons/MoreVert'
 import IconButton from '@material-ui/core/IconButton'
 import Menu from '@material-ui/core/Menu'
+import FilterVintageIcon from '@material-ui/icons/FilterVintage'
+import AccountCircleIcon from '@material-ui/icons/AccountCircle'
 
 // TODO:
 // welcome user
@@ -41,7 +43,7 @@ const Header = props => {
 
 	const guestLinks = (
 		<Link to ='/start' className='link'>
-			Get Started
+			<AccountCircleIcon className={classes.icon} />
 		</Link>
 	)
   
@@ -133,7 +135,7 @@ const Header = props => {
 				<Toolbar>
 					<Typography className={classes.title} variant='h6' noWrap>
 						<Link to='/' className='link'>
-							Flowers For You
+							Flowers For You <span> <FilterVintageIcon size='small'/> </span>
 						</Link>
 					</Typography>
 		
@@ -155,34 +157,32 @@ const Header = props => {
 
 					<div className={classes.grow} />
 					<div className={classes.sectionDesktop}>
-						<div>
-							<p
-							ref={anchorRef}
-							aria-controls={open ? 'menu-list-grow' : undefined}
-							aria-haspopup='true'
-							onClick={handleToggle}
-							className='link'
+						<p
+						ref={anchorRef}
+						aria-controls={open ? 'menu-list-grow' : undefined}
+						aria-haspopup='true'
+						onClick={handleToggle}
+						className='link'
+						>
+							Occasions
+						</p>
+						<Popper className="dropdown" open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
+						{({ TransitionProps, placement }) => (
+							<Grow
+							{...TransitionProps}
+							style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
 							>
-								Occasions
-							</p>
-							<Popper className="dropdown" open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
-							{({ TransitionProps, placement }) => (
-								<Grow
-								{...TransitionProps}
-								style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
-								>
-								<Paper>
-									<MenuList autoFocusItem={open} id='menu-list-grow' className={classes.drpdown}>
-										<MenuItem><Link to='/AnniversaryOccasions' className='sublink'> Anniversary </Link></MenuItem>
-										<MenuItem><Link to='/BirthdayOccasions' className='sublink'> Birthday </Link></MenuItem>
-										<MenuItem><Link to='/loveOccasions' className='sublink'> Valentine </Link></MenuItem>
-										<MenuItem><Link to='/ChristmasOccasions' className='sublink'> Christmas </Link></MenuItem>
-									</MenuList>
-								</Paper>
-								</Grow>
-							)}
-							</Popper>
-						</div>
+							<Paper>
+								<MenuList autoFocusItem={open} id='menu-list-grow' className={classes.drpdown}>
+									<MenuItem><Link to='/AnniversaryOccasions' className='sublink'> Anniversary </Link></MenuItem>
+									<MenuItem><Link to='/BirthdayOccasions' className='sublink'> Birthday </Link></MenuItem>
+									<MenuItem><Link to='/loveOccasions' className='sublink'> Valentine </Link></MenuItem>
+									<MenuItem><Link to='/ChristmasOccasions' className='sublink'> Christmas </Link></MenuItem>
+								</MenuList>
+							</Paper>
+							</Grow>
+						)}
+						</Popper>
 
 						<Link to ='/customization' className='link'>
 							Customize your order
@@ -290,7 +290,8 @@ const useStyles = makeStyles((theme) => ({
 		  display: 'flex',
 		},
 		width: '65%',
-		justifyContent: 'space-evenly'
+		justifyContent: 'space-evenly',
+		marginTop: '15px'
 	},
 	sectionMobile: {
 		display: 'flex',
@@ -302,6 +303,9 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: 'rgb(231, 165, 176)',
 		border: '1px solid rgb(231, 165, 176)',
 		color: 'white',
+	},
+	icon: {
+		fontSize: '30px'
 	}
   }))
   

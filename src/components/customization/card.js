@@ -26,39 +26,32 @@ export default function Maincard(props) {
   const {avatarUrl,title,subtitle,description,imageUrl,details,price} = props;
 
   return (
-    <Card style = {{width:"200px"}}>
+    <Card style = {{width:'230px'}}>
       <CardHeader
         avatar={
           <Avatar src = {avatarUrl}/>
-         
-        }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
         }
         title={title}
         subheader={subtitle}
       />
       <CardMedia
-        style = {{height:"200px"}}
+        style = {{height:'200px'}}
         // className={classes.media}
         image={imageUrl}
-        // title="Paella dish"
       />
       <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p" style={{color:"black"}}>
+        <Typography variant='body2' color='textSecondary' component='p' style={{color:'black'}}>
          {description}
         </Typography>
-        <Typography variant="body2" color="textSecondary" component="p" style={{color:"#BF5E66"}}>
+        <Typography variant='body2' color='textSecondary' component='p' style={{color:'#BF5E66'}}>
         {price}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
+        <IconButton aria-label='add to favorites'>
           <FavoriteIcon />
         </IconButton>
-        <IconButton aria-label="share">
+        <IconButton aria-label='share'>
           <ShareIcon />
         </IconButton>
         <IconButton
@@ -67,12 +60,12 @@ export default function Maincard(props) {
         //   })}
           onClick={handleExpandClick}
           aria-expanded={expanded}
-          aria-label="show more"
+          aria-label='show more'
         >
           <ExpandMoreIcon />
         </IconButton>
       </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
+      <Collapse in={expanded} timeout='auto' unmountOnExit>
         <CardContent>
           <Typography paragraph>
            {details}

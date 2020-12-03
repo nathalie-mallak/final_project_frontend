@@ -2,7 +2,6 @@ import React from 'react'
 import './footer.css'
 
 import Grid from '@material-ui/core/Grid'
-import { makeStyles } from '@material-ui/core/styles'
 import MailIcon from '@material-ui/icons/Mail'
 import PhoneInTalkIcon from '@material-ui/icons/PhoneInTalk'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
@@ -10,11 +9,9 @@ import CopyrightIcon from '@material-ui/icons/Copyright'
 
 const Footer = () => {
     
-    const classes = useStyles();
-
     return (
         <>
-            <div className={classes.root}>
+            <div className='footer'>
                 <Grid container spacing={3} justify='center'>
                     <Grid item xs={8} sm={4}>
                         <h4 className='h4'>Raafat Nasrdine</h4>
@@ -50,14 +47,3 @@ const Footer = () => {
 }
 
 export default Footer
-
-const useStyles = makeStyles(() => ({
-    root: {
-      flexGrow: 1,
-      backgroundColor: '#BF5E66',
-      width: '99%',
-      padding: '15px 0px 2px',
-      marginBottom: '-13px',
-      marginTop: '25px'
-    }
-}))
