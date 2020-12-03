@@ -10,18 +10,15 @@ export default function Cont() {
     setCart([...cart,{...Flower}]);
   }
     const getFlower = (Flowerobj) =>{
-      return(
-        <Grid item xs={12} sm={4} md={3} >
-          <Maincard  {...Flowerobj}/>
-          </Grid>
-      )
+        return(
+            <Grid item xs={12} sm={4} md={3} >
+                <Maincard {...Flowerobj}/>
+            </Grid>
+        )
     }
     return (
-        <Grid container spacing={10}>
-           
-           {Flower.map((flowerobj => getFlower(flowerobj)))}
-          
+        <Grid container spacing={10}> 
+            {Flower.map(flowerobj => getFlower(flowerobj))}           
         </Grid>
-  
     )
 }

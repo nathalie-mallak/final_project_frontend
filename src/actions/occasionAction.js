@@ -1,12 +1,13 @@
 import { GET_OCCASIONS, ITEMS_LOADING } from './types'
 import axios from 'axios'
 
-export const getHappyOccasions = () => dispatch => {
+// anniversary occasions
+export const getAnniversaryOccasions = () => dispatch => {
 
     dispatch(setItemsLoading())
 
     axios
-        .get(`/api/occasions/happy`)
+        .get(`/api/occasions/4`)
         .then(res => {
             dispatch ({
                 type: GET_OCCASIONS,
@@ -16,12 +17,13 @@ export const getHappyOccasions = () => dispatch => {
         .catch(err => console.log(err))
 }
 
+// valentine occasions
 export const getLoveOccasions = () => dispatch => {
 
     dispatch(setItemsLoading())
 
     axios
-        .get(`/api/occasions/love`)
+        .get(`/api/occasions/1`)
         .then(res => {
             dispatch ({
                 type: GET_OCCASIONS,
@@ -31,12 +33,13 @@ export const getLoveOccasions = () => dispatch => {
         .catch(err => console.log(err))
 }
 
-export const getGratitudeOccasions = () => dispatch => {
+// birthdays occasions
+export const getBirthdayOccasions = () => dispatch => {
 
     dispatch(setItemsLoading())
 
     axios
-        .get(`/api/occasions/gratitude`)
+        .get(`/api/occasions/2`)
         .then(res => {
             dispatch ({
                 type: GET_OCCASIONS,
@@ -46,12 +49,13 @@ export const getGratitudeOccasions = () => dispatch => {
         .catch(err => console.log(err))
 }
 
-export const getSympathyOccasions = () => dispatch => {
+// christmas occasions
+export const getChristmasOccasions = () => dispatch => {
 
     dispatch(setItemsLoading())
 
     axios
-        .get(`/api/occasions/sympathy`)
+        .get(`/api/occasions/3`)
         .then(res => {
             dispatch ({
                 type: GET_OCCASIONS,

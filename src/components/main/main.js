@@ -3,15 +3,14 @@ import { Route, Switch } from 'react-router-dom'
 import Home from '../home/home'
 import About from '../aboutUs/aboutUs'
 import Start from '../start/start'
-import Happy from '../occasions/happy'
-import Love from '../occasions/love'
-import Sympathy from '../occasions/sympathy'
-import Gratitude from '../occasions/gratitude'
+import Anniversary from '../occasions/anniversary'
+import Love from '../occasions/valentine'
+import Christmas from '../occasions/christmas'
+import Birthday from '../occasions/birthday'
 import Customization from '../customization/customization'
 import Admin from '../adminDashboard/Index'
 import item from '../occasions/addNewItem'
-import Basket from '../cart/cart'
-
+import newItems from '../admin/addItems'
 
 export default function main() {
   
@@ -23,13 +22,13 @@ export default function main() {
                 <Route exact path='/about' component={About} />
                 <Route exact path='/admin' component={Admin} />
                 <Route exact path='/start' component={Start} />
-                <Route exact path='/Basket' component={Basket} />
-                <Route exact path='/sympathyOccasions' component={Sympathy} />
-                <Route exact path='/happyOccasions' component={Happy} />
+                <Route exact path='/ChristmasOccasions' component={Christmas} />
+                <Route exact path='/AnniversaryOccasions' component={Anniversary} />
                 <Route exact path='/loveOccasions' component={Love} />
-                <Route exact path='/gratitudeOccasions' component={Gratitude} />
+                <Route exact path='/BirthdayOccasions' component={Birthday} />
                 <Route exact path='/customization' component={Customization} />
                 <Route exact path='/addNewItem' component={item} />
+                <Route exact path='/addItems' component={newItems} />
             </Switch>
         </>
     )

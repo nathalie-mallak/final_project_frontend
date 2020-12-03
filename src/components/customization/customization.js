@@ -2,7 +2,7 @@ import React, { useEffect, useCallback } from 'react'
 import './customization.css'
 import { SelectFlowers } from '../select'
 import { connect } from 'react-redux'
-import { getFlowers, getBaskets, getNoteCard, setItemsLoading } from '../../actions/customizationAction'
+import { getFlowers, getBaskets, setItemsLoading } from '../../actions/customizationAction'
 import PropTypes from 'prop-types'
 import Header from '../header/header'
 import Footer from '../footer/footer'
@@ -19,17 +19,14 @@ const Customization = props =>
 	Customization.propTypes = {
 		getFlowers: PropTypes.func.isRequired,
 		getBaskets: PropTypes.func.isRequired,
-		getNoteCard: PropTypes.func.isRequired,
 		flowers: PropTypes.object.isRequired,
 		baskets: PropTypes.object.isRequired,
-		noteCards: PropTypes.object.isRequired
 	}
 
 	useEffect(() => {
 
 		props.getBaskets()
 		props.getFlowers()
-		props.getNoteCard()
 
 	}, [])
 
@@ -71,13 +68,11 @@ const Customization = props =>
 const mapStateToProps = state => { 
 	const { flower } = state;
 	const { basket } = state;
-	const { noteCard } = state;
 
 	return { 
 		flowers: flower,
 		baskets: basket,
-		noteCards: noteCard
 	}
 }
 
-export default connect(mapStateToProps, {getFlowers, getBaskets, getNoteCard})(Customization)
+export default connect(mapStateToProps, {getFlowers, getBaskets})(Customization)

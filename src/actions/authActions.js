@@ -1,4 +1,3 @@
-import React from 'react'
 import axios from 'axios'
 import { USER_LOADED, USER_LOADING, AUTH_ERROR, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT_SUCCESS, REGISTER_SUCCESS, REGISTER_FAIL } from '../actions/types'
 import { returnErrors } from './errorActions'
@@ -24,7 +23,7 @@ export const loadUser = () => (dispatch, getState) => {
 }
 
 // register user
-export const register = (info) => dispatch => {
+export const register = (data) => dispatch => {
  
     //headers
     const config = {
@@ -34,14 +33,17 @@ export const register = (info) => dispatch => {
     }
 
     axios
-        .post('/api/userRegister', info, config)
-        .then( res => dispatch ({
-            type: REGISTER_SUCCESS,
-            payload: res.data
-        }))
+        .post('/api/userRegister', data, config)
+        .then(res => (
+            console.log(res.data),
+            dispatch ({
+                type: REGISTER_SUCCESS,
+                payload: res.data
+            })
+        ))
         .catch(err =>
             dispatch( returnErrors(err.response.data, err.response.status, 'REFISTER_FAIL')),
-            dispatch ({
+            dispatch({
                 type: REGISTER_FAIL
             })
         )
@@ -49,6 +51,8 @@ export const register = (info) => dispatch => {
 
 // login user
 export const login = (info) => dispatch => {
+
+    dispatch(logout())
 
     // headers
     const config = {

@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, Fragment } from 'react'
 import './header.css'
 import { Link } from 'react-router-dom'
 import Search from '../search/search'
+import { connect } from 'react-redux'
+import { logout } from '../../actions/authActions'
+import PropTypes from 'prop-types'
 
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
@@ -19,19 +22,31 @@ import Menu from '@material-ui/core/Menu'
 import Flower from '../../flower'
 
 
-const Header = () => {
-	const [cart , setCart] = useState([]);
-	const addToCart = (Flower) =>{
-		console.log('add to cart is successfully done')
-		setCart([...cart,Flower]);
-	  }
+// TODO:
+// welcome user
 
-	
-	
+const Header = props => {
 	const classes = useStyles()
 
 	const [open, setOpen] = useState(false)
 	const anchorRef = React.useRef(null)
+
+	const { isAuthenticated, user } = props.auth
+
+	const authLinks = (
+		<Fragment> 
+			<span>{ user ? `Welcome ${user.name}` : ''} </span>
+			<Link onClick={props.logout} className='link' to='#'>
+				Logout
+			</Link>
+		</Fragment>	
+	)
+
+	const guestLinks = (
+		<Link to ='/start' className='link'>
+			Get Started
+		</Link>
+	)
   
 	const handleToggle = () => {
 		setOpen((prevOpen) => !prevOpen)
@@ -73,10 +88,10 @@ const Header = () => {
 		>
 			<Paper className={classes.drpdown} >
 				<MenuList>
-					<MenuItem onClick={handleMenuClose}><Link to='/happyOccasions' className='sublink'> Happy </Link></MenuItem>
-					<MenuItem onClick={handleMenuClose}><Link to='/gratitudeOccasions' className='sublink'> Gratitude </Link></MenuItem>
-					<MenuItem onClick={handleMenuClose}><Link to='/loveOccasions' className='sublink'> Love </Link></MenuItem>
-					<MenuItem onClick={handleMenuClose}><Link to='/sympathyOccasions' className='sublink'> Sympathy </Link></MenuItem>
+					<MenuItem onClick={handleMenuClose}><Link to='/AnniversaryOccasions' className='sublink'> Anniversary </Link></MenuItem>
+					<MenuItem onClick={handleMenuClose}><Link to='/BirthdayOccasions' className='sublink'> Birthday </Link></MenuItem>
+					<MenuItem onClick={handleMenuClose}><Link to='/loveOccasions' className='sublink'> Valentine </Link></MenuItem>
+					<MenuItem onClick={handleMenuClose}><Link to='/ChristmasOccasions' className='sublink'> Christmas </Link></MenuItem>
 				</MenuList>
 			</Paper>
 		</Menu>
@@ -107,8 +122,8 @@ const Header = () => {
 						<Link to='/about' className='sublink'> Our Shop </Link>
 					</MenuItem>
 
-					<MenuItem>
-						<Link to='/start' className='sublink'> Get Started </Link>
+					<MenuItem className='sublink'>
+						{ isAuthenticated ? authLinks : guestLinks }
 					</MenuItem>
 					<MenuItem>
 						<Link to='/Basket' className='sublink'> <AddShoppingCartIcon/> </Link>
@@ -164,10 +179,10 @@ const Header = () => {
 								>
 								<Paper>
 									<MenuList autoFocusItem={open} id='menu-list-grow' className={classes.drpdown}>
-										<MenuItem><Link to='/happyOccasions' className='sublink'> Happy </Link></MenuItem>
-										<MenuItem><Link to='/gratitudeOccasions' className='sublink'> Gratitude </Link></MenuItem>
-										<MenuItem><Link to='/loveOccasions' className='sublink'> Love </Link></MenuItem>
-										<MenuItem><Link to='/sympathyOccasions' className='sublink'> Sympathy </Link></MenuItem>
+										<MenuItem><Link to='/AnniversaryOccasions' className='sublink'> Anniversary </Link></MenuItem>
+										<MenuItem><Link to='/BirthdayOccasions' className='sublink'> Birthday </Link></MenuItem>
+										<MenuItem><Link to='/loveOccasions' className='sublink'> Valentine </Link></MenuItem>
+										<MenuItem><Link to='/ChristmasOccasions' className='sublink'> Christmas </Link></MenuItem>
 									</MenuList>
 								</Paper>
 								</Grow>
@@ -180,13 +195,8 @@ const Header = () => {
 						</Link>
 
 						<Link to='/about' className='link'> Our Shop </Link>
-						
-						<Link to ='/start' className='link'>
-							Get Started
-						</Link>
-						<Link to ='/Basket' className='link'>
-						<AddShoppingCartIcon/>({cart.length})
-						</Link>
+
+						{ isAuthenticated ? authLinks : guestLinks}
 					</div>
 
 					<div className={classes.sectionMobile}>
@@ -209,7 +219,16 @@ const Header = () => {
 	)
 }
 
-export default Header
+Header.propTypes = {
+	logout: PropTypes.func.isRequired,
+	auth: PropTypes.object.isRequired
+}
+
+const mapStateToProps = state => ({
+	auth: state.auth 
+})
+
+export default connect(mapStateToProps, { logout }) (Header)
 
 const useStyles = makeStyles((theme) => ({
 	root: {
