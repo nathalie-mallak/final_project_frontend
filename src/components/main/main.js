@@ -17,7 +17,9 @@ import Privacy from '../legal/privacy'
 import shoppingPolicy from '../legal/shopping'
 
 export default function main() {
-    return (
+  
+    
+        return (
         <>
             <Switch>
                 <Route exact path='/' component={Home} />

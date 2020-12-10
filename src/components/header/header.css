@@ -44,3 +44,8 @@
 .dropdown{
 	z-index: 10;
 }
+#logo{
+	height: 30px;
+	width: 30px;
+	transform: translate(20px,-4px)
+}

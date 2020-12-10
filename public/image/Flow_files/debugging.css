@@ -1,0 +1,43 @@
+/*//////////////////////////////////////////////////////////////////////////////////////////*/
+/* Debugged CSS  */
+/*//////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+.ua-ie-9 .building-slide-box {
+	display: none !important;
+}
+/*19.05*/
+
+
+.table-contact td, .table-contact th {
+	border: none !important;
+	text-align: left !important;
+}
+/*21.05*/
+
+html .yamm .dropdown-menu {
+	top: 67px;
+}
+.header .menu-item-has-children {
+	border-bottom: 5px solid transparent;
+}
+/*1.06*/
+
+.breadcrumb > li a {
+	color: #fff;
+}
+.overflow-hidden {
+	overflow: hidden;
+}
+.notfound_title {
+	text-transform: uppercase;
+}
+
+
+/*20.08.2015*/
+
+.about-autor .comment {
+    margin-bottom: 0;
+    padding-left: 115px;
+}

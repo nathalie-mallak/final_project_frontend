@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useState}from 'react';
 // import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -12,8 +12,11 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import Flower from '../../flower'
+
 
 
 export default function Maincard(props) {
@@ -24,6 +27,28 @@ export default function Maincard(props) {
     setExpanded(!expanded);
   };
   const {avatarUrl,title,subtitle,description,imageUrl,details,price} = props;
+  const [cart , setCart] = useState([]);
+  
+  
+  
+
+  const addToCart = (Flower) =>{
+    console.log('add to cart is successfully done')
+    setCart([...cart,{...Flower}]);
+    console.log(cart);
+    console.log(cart.length);
+
+   
+   
+  }
+
+  const  removeFromCart = (FlowerToRemove) =>{
+    console.log('remove from cart is successfully done')
+    setCart(cart.filter((Flower) => Flower.id !== FlowerToRemove.id))
+    console.log(cart);
+    console.log(cart.length);
+    
+  }
 
   return (
     <Card style = {{width:'230px'}}>
@@ -33,13 +58,14 @@ export default function Maincard(props) {
         }
         title={title}
         subheader={subtitle}
+        className="cardheader"
       />
       <CardMedia
         style = {{height:'200px'}}
         // className={classes.media}
         image={imageUrl}
       />
-      <CardContent>
+      <CardContent className="cardfooter">
         <Typography variant='body2' color='textSecondary' component='p' style={{color:'black'}}>
          {description}
         </Typography>
@@ -54,6 +80,9 @@ export default function Maincard(props) {
         <IconButton aria-label='share'>
           <ShareIcon />
         </IconButton>
+        <Typography variant="body2" color="textSecondary" component="p" style={{color:"black"}}>
+         {cart.length}
+        </Typography>
         <IconButton
         //   className={clsx(classes.expand, {
         //     [classes.expandOpen]: expanded,

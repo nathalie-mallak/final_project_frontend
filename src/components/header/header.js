@@ -10,6 +10,7 @@ import { AppBar, Toolbar, Typography, Paper, Grow, Popper, MenuItem, MenuList, I
 import FilterVintageIcon from '@material-ui/icons/FilterVintage'
 import MoreIcon from '@material-ui/icons/More'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle'
+import BouquetIcon from '../../image/FlowerIcon.png'
 
 // TODO:
 // welcome user
@@ -118,6 +119,9 @@ const Header = props => {
 					<MenuItem className='sublink'>
 						{ isAuthenticated ? authLinks : guestLinks }
 					</MenuItem>
+					<MenuItem>
+						<Link to='/Basket' className='sublink'> <AddShoppingCartIcon/> </Link>
+					</MenuItem>
 				</MenuList>
 			</Paper>
 		</Menu>
@@ -129,7 +133,7 @@ const Header = props => {
 				<Toolbar>
 					<Typography className={classes.title} variant='h6' noWrap>
 						<Link to='/' className='link'>
-							Flowers For You <span> <FilterVintageIcon size='small'/> </span>
+							Flowers For You <span> <img src = {BouquetIcon} id="logo"></img> </span>
 						</Link>
 					</Typography>
 		
