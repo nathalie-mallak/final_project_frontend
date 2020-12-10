@@ -7,15 +7,9 @@ import { clearErrors } from '../../actions/errorActions'
 import './start.css'
 
 import { makeStyles } from '@material-ui/core/styles'
-import TextField from '@material-ui/core/TextField'
-import FormControl from '@material-ui/core/FormControl'
+import { TextField, FormControl, IconButton, OutlinedInput, InputLabel, InputAdornment, Paper } from '@material-ui/core'
 import Visibility from '@material-ui/icons/Visibility'
 import VisibilityOff from '@material-ui/icons/VisibilityOff'
-import IconButton from '@material-ui/core/IconButton'
-import OutlinedInput from '@material-ui/core/OutlinedInput'
-import InputLabel from '@material-ui/core/InputLabel'
-import InputAdornment from '@material-ui/core/InputAdornment'
-import Paper from '@material-ui/core/Paper'
 
 const Login = props => {
 

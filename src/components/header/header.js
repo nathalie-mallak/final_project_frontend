@@ -6,19 +6,9 @@ import { connect } from 'react-redux'
 import { logout } from '../../actions/authActions'
 import PropTypes from 'prop-types'
 
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import Typography from '@material-ui/core/Typography'
-import { fade, makeStyles } from '@material-ui/core/styles'
-import Grow from '@material-ui/core/Grow'
-import Paper from '@material-ui/core/Paper'
-import Popper from '@material-ui/core/Popper'
-import MenuItem from '@material-ui/core/MenuItem'
-import MenuList from '@material-ui/core/MenuList'
-import MoreIcon from '@material-ui/icons/MoreVert'
-import IconButton from '@material-ui/core/IconButton'
-import Menu from '@material-ui/core/Menu'
+import { AppBar, Toolbar, Typography, Paper, Grow, Popper, MenuItem, MenuList, IconButton, Menu, fade, makeStyles }from '@material-ui/core'
 import FilterVintageIcon from '@material-ui/icons/FilterVintage'
+import MoreIcon from '@material-ui/icons/More'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle'
 
 // TODO:
@@ -118,7 +108,11 @@ const Header = props => {
 					</MenuItem>
 
 					<MenuItem>
-						<Link to='/about' className='sublink'> Our Shop </Link>
+						<Link to='/about' className='sublink'> About Us </Link>
+					</MenuItem>
+
+					<MenuItem>
+						<Link to='/contact' className='sublink'> Contact Us </Link>
 					</MenuItem>
 
 					<MenuItem className='sublink'>
@@ -184,11 +178,11 @@ const Header = props => {
 						)}
 						</Popper>
 
-						<Link to ='/customization' className='link'>
-							Customize your order
-						</Link>
+						<Link to ='/customization' className='link'> Customize your order </Link>
 
-						<Link to='/about' className='link'> Our Shop </Link>
+						<Link to='/about' className='link'> About Us </Link>
+
+						<Link to='/contact' className='link'> Contact Us </Link>
 
 						{ isAuthenticated ? authLinks : guestLinks}
 					</div>

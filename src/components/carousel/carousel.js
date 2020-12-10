@@ -3,7 +3,6 @@ import Carousel from 'react-bootstrap/Carousel'
 import Slider1 from '../../image/Slider1.jpg'
 import Slider2 from '../../image/Slider2.jpg'
 import Slider3 from '../../image/Slider3.jpg'
-import Slider4 from '../../image/slider4.jpg'
 import './carousel.css'
 
 export default function Slider() {

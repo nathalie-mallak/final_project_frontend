@@ -163,6 +163,7 @@ const useStyles = makeStyles(() => ({
 		marginBottom: '15px',
 	},
 	paper: {
-		padding: '20px 0px'
+		padding: '20px 0px',
+		marginBottom: '20px'
 	}
 }))

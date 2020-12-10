@@ -8,7 +8,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import FilterVintageIcon from '@material-ui/icons/FilterVintage'
 
 const AboutUs = () => {
-	const classes = useStyles();
+	const classes = useStyles()
 
 	return (
 		<>
@@ -23,7 +23,7 @@ const AboutUs = () => {
 					</Grid>
 					<Grid item xs={8} sm={4}>
 						<div className='infoContainer'>
-							<h3> Conatct Us </h3>
+							<h3> Contact Us </h3>
 							<p className='quote'> We will be happy to receive your inquiries and orders<span className='span'> <FilterVintageIcon size='small'/> </span> </p>
 							
 							<div className='subDiv'> 

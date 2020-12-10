@@ -1,6 +1,6 @@
 .card{
     width:13rem;
-    margin-bottom: 13px;
+    margin-bottom: 20px;
 }
 
 .card:hover{
@@ -60,7 +60,6 @@
 .productsTitle
 {
     font-size: 25px;
-    /* margin-left: 16% */
     text-align: center;
     padding: 15px 0px;
     color: rgb(75, 62, 62)

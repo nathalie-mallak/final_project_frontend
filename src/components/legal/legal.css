@@ -1,0 +1,16 @@
+.termsContainer
+{
+    border: 3px solid #BF5E66;
+    border-radius: 30px;
+    width: 94%;
+    padding: 30px ;
+    margin-bottom: 10px;
+    justify-content: center;
+    margin: 20px auto;
+    color: #BF5E66
+}
+
+.termsTitle
+{
+    font-family: Comfortaa, cursive;
+}

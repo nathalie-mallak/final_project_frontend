@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
 import SearchIcon from '@material-ui/icons/Search'
 import InputBase from '@material-ui/core/InputBase'
 import { fade, makeStyles } from '@material-ui/core/styles'
 import Nat from './nat'
 import axios from 'axios'
+import debounce from 'lodash.debounce'
 
 const Search = props => {
 
@@ -15,8 +16,39 @@ const Search = props => {
 
 	const [ inputValue, setInputValue] = useState('')
 
+	const searchRequest = useCallback(debounce((searchText) => {
+
+		console.log('nat')
+
+		axios
+		.get(`/api/searchItems/${encodeURI(searchText)}`)
+		.then((searchData) => {
+
+			console.log(searchData)
+			let responseKeys = Object.keys(searchData)
+			let finalItems = []
+	
+			responseKeys.forEach(key => {
+				const item = {
+					id: key,
+					name: searchData[key].name,
+				}
+				finalItems.push(item)
+			})
+			console.log(finalItems)
+			loadHandler(finalItems)
+		})
+
+	}, 1000),[debounce])
+
     const searchHandler = (e) => {
-        setInputValue(e.target.value)
+		setInputValue(e.target.value)
+		
+		if(e.target.value == inputRef.current.value)  
+		{
+			return;
+		}
+		searchRequest(e.target.value)
 	}
 
 	// const names = ['Hi', 'hey', 'hello']
@@ -25,41 +57,8 @@ const Search = props => {
 	// 	return getFlowers.filter(item => item.toLowerCase().includes(inputValue.toLowerCase()))
 	// }
 
-	useEffect (() => 
-	{
-		let timer = setTimeout(() => {
 
-			if(inputValue !== inputRef.current.value)  
-			{
-				return;
-			}
-
-			const {searchText} = props.match.params 
-
-			axios
-				.get(`/api/searchItems/${searchText}`)
-				.then((searchData) => {
-
-					let responseKeys = Object.keys(searchData)
-					let finalItems = []
-			
-					responseKeys.forEach(key => {
-						const item = {
-							id: key,
-							name: searchData[key].name,
-						}
-						finalItems.push(item)
-					})
-					console.log(finalItems)
-				loadHandler(finalItems)
-			})
-		}, 500)
-
-		return () => {
-			clearTimeout(timer);
-		}
-
-    }, [inputValue, loadHandler, inputRef])
+		
 
     return (
         <>
