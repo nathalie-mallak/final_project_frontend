@@ -1,0 +1,75 @@
+.window
+{
+    background-color: #d3c1cd;
+    margin-top: -17px;
+    padding-top: 30px
+}
+
+.card{
+    width: 250px;
+    cursor: pointer;
+}
+
+.card:hover{
+    box-shadow: 5px 10px 20px 1px grey !important;
+}
+
+.MuiTypography-body2
+{
+    font-size: 22px !important;
+    color: rgb(75, 62, 62);
+    font-family: cursive, Comfortaa;
+}
+
+.cardheader
+{
+    font-size: 355px !important;
+    color: rgb(75, 62, 62) 
+}
+
+.card-text{
+    font-size: 0.9rem;
+    padding: 0rem 1.9rem;
+}
+
+.container-fluid-row{
+    padding-top:6rem;
+    padding-bottom:10rem;
+    margin-bottom: 6rem;
+}
+
+.cardimg{
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+.cardimg:hover{
+    transform: scale(1.15);
+}
+
+.overflow{
+    overflow: hidden;
+}
+
+.button 
+{
+    cursor: pointer;
+	border: 1px solid grey;
+	border-radius: 10px;
+	padding: 7px;
+	background-color: #BF5E66;
+    color: white;
+    font-size: 15px
+}
+
+.button:hover
+{
+    background-color: rgb(180, 115, 126);
+}
+
+.productsTitle
+{
+    font-size: 25px;
+    text-align: center;
+    padding: 15px 0px;
+    color: rgb(75, 62, 62)
+}

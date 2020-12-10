@@ -80,13 +80,16 @@ import React from 'react'
 import AnniversaryCustom from './grid'
 import Header from '../../header/header'
 import Footer from '../../footer/footer'
+import '../occasions.css'
 
 export default function Anniversary() {
 	return (
-		<div>
+		<>
 		<Header/>
-				<AnniversaryCustom/>
-				<Footer/>
+		<div className='window'>
+			<AnniversaryCustom/>
 		</div>
+		<Footer/>
+		</>
 	)
 }

@@ -33,11 +33,6 @@ const Contact = () => {
             <div className={classes.root}>
                 <Grid container justify='space-evenly'>
                     <Grid item xs={8} sm={6}>
-						{/* <h3> About Us </h3>					
-						<p className='p'> Propelled by our affection for flowers and energy about nature, it is our obsession to make creative and noteworthy plant and new flower courses of action. We trust that the best, freshest flowers deliver the most noteworthy presentations. <br/><br/>
-
-						<span className='span'>Flowers For You </span> is glad to give quality flowers and plants to our customers. Our retail premises opened in 2019. From that point forward, we have bloomed into a full administration flower specialist with both private and corporate customers. Our master staff is here to enable all customers to pick the best flowers and plants for all events and purposes </p> */}
-
                         <form onSubmit={submitHandler} className='container'>
 
                             <p className='quote'> We will be happy to receive your inquiries and orders<span className='span'> <FilterVintageIcon size='small'/> </span> </p>
@@ -91,9 +86,8 @@ const useStyles = makeStyles(() => ({
 	  borderRadius: '30px',
       width: '94%',
       padding: '30px 0px',
-	  marginBottom: '10px',
 	  justifyContent: 'center',
-	  margin: '20px auto',
+	  margin: '100px auto 100px',
     },
     textField: {
 		marginBottom: '15px',

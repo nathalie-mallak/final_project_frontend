@@ -8,12 +8,9 @@ export default [
       avatarUrl:
         "https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg",
       imageUrl:
-        "/image/Rose.jpg",
+        "/image/flower13.jpg",
       details:
         "A flower is a special part of the plant. Flowers are also called the bloom or blossom of a plant. Flowers have petals. Inside the part of the flower that has petals are the parts which produce pollen and seeds."
-
-      
-        
     },
     {
       id: "2",
@@ -24,7 +21,7 @@ export default [
       avatarUrl:
         "https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg",
       imageUrl:
-        "image/Gardenia.jpg",
+        "image/flower7.jpg",
         details:
         "A flower is a special part of the plant. Flowers are also called the bloom or blossom of a plant. Flowers have petals. Inside the part of the flower that has petals are the parts which produce pollen and seeds."
     },
@@ -37,7 +34,7 @@ export default [
       avatarUrl:
         "https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg",
       imageUrl:
-        "./image/Blossom.jpg",
+        "./image/flower25.jpg",
         details:
         "A flower is a special part of the plant. Flowers are also called the bloom or blossom of a plant. Flowers have petals. Inside the part of the flower that has petals are the parts which produce pollen and seeds."
     },
@@ -50,7 +47,7 @@ export default [
       avatarUrl:
         "https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg",
       imageUrl:
-        "./image/Bloom.jpg",
+        "./image/flower22.jpg",
         details:
         "A flower is a special part of the plant. Flowers are also called the bloom or blossom of a plant. Flowers have petals. Inside the part of the flower that has petals are the parts which produce pollen and seeds."
     },
@@ -63,7 +60,7 @@ export default [
       avatarUrl:
         "https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg",
       imageUrl:
-        "./image/Tulip.jpg",
+        "./image/flower12.jpg",
         details:
         "A flower is a special part of the plant. Flowers are also called the bloom or blossom of a plant. Flowers have petals. Inside the part of the flower that has petals are the parts which produce pollen and seeds."
     },
@@ -76,7 +73,7 @@ export default [
       avatarUrl:
         "https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg",
       imageUrl:
-        "./image/Orchide.jpg",
+        "./image/flower14.jpg",
         details:
         "A flower is a special part of the plant. Flowers are also called the bloom or blossom of a plant. Flowers have petals. Inside the part of the flower that has petals are the parts which produce pollen and seeds."
     },
@@ -89,7 +86,7 @@ export default [
         avatarUrl:
           "https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg",
         imageUrl:
-          "./image/Bergarder.jpg",
+          "./image/flower15.jpg",
           details:
           "A flower is a special part of the plant. Flowers are also called the bloom or blossom of a plant. Flowers have petals. Inside the part of the flower that has petals are the parts which produce pollen and seeds."
       },
@@ -102,7 +99,7 @@ export default [
         avatarUrl:
           "https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg",
         imageUrl:
-          "./image/Sunflower1.jpg",
+          "./image/flower23.jpg",
           details:
           "A flower is a special part of the plant. Flowers are also called the bloom or blossom of a plant. Flowers have petals. Inside the part of the flower that has petals are the parts which produce pollen and seeds."
       }
