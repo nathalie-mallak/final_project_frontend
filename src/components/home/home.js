@@ -3,6 +3,7 @@ import Header from '../header/header'
 import Slider from '../carousel/carousel'
 import Footer from '../footer/footer'
 import Group from '../cards/group'
+import SimpleContainer from '../section/section'
 import './home.css'
 
 const Home = () => {
@@ -12,7 +13,8 @@ const Home = () => {
 				<Header />
 				<Slider />
 				<Group />
-				<Footer />
+				<SimpleContainer/>
+				<Footer/>
 			</div>
 		</>
 	)

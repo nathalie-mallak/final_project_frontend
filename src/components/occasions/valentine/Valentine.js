@@ -77,7 +77,7 @@
 
 
 import React from 'react'
-import Christmascustom from './grid'
+import Valentinecustom from './grid'
 import Header from '../../header/header'
 import Footer from '../../footer/footer'
 
@@ -85,7 +85,7 @@ export default function Christmas() {
 	return (
 		<div>
 		<Header/>
-				<Christmascustom/>
+				<Valentinecustom/>
 				<Footer/>
 		</div>
 	)
