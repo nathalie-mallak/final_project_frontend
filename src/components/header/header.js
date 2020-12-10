@@ -120,7 +120,7 @@ const Header = props => {
 						{ isAuthenticated ? authLinks : guestLinks }
 					</MenuItem>
 					<MenuItem>
-						<Link to='/Basket' className='sublink'> <AddShoppingCartIcon/> </Link>
+						<Link to='/Basket' className='sublink'> </Link>
 					</MenuItem>
 				</MenuList>
 			</Paper>

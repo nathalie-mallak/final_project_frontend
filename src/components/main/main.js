@@ -4,11 +4,11 @@ import Home from '../home/home'
 import About from '../aboutUs/aboutUs'
 import Contact from '../contactUs/contact'
 import Start from '../start/start'
-import Anniversary from '../occasions/anniversary'
-import Love from '../occasions/valentine'
-import Christmas from '../occasions/christmas'
-import Birthday from '../occasions/birthday'
+import Anniversary from '../occasions/Anniversary/anniversary'
+import Christmas from '../occasions/christmas/christmas'
+import Birthday from '../occasions/birthday/birthday'
 import Customization from '../customization/customization'
+import Valentine from '../occasions/valentine/Valentine'
 import Admin from '../adminDashboard/Index'
 import item from '../occasions/addNewItem'
 import newItems from '../admin/addItems'
@@ -29,7 +29,7 @@ export default function main() {
                 <Route exact path='/start' component={Start} />
                 <Route exact path='/ChristmasOccasions' component={Christmas} />
                 <Route exact path='/AnniversaryOccasions' component={Anniversary} />
-                <Route exact path='/loveOccasions' component={Love} />
+                <Route exact path='/loveOccasions' component={Valentine} />
                 <Route exact path='/BirthdayOccasions' component={Birthday} />
                 <Route exact path='/customization' component={Customization} />
                 <Route exact path='/addNewItem' component={item} />

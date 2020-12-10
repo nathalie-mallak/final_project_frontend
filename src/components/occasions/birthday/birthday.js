@@ -1,5 +1,5 @@
 // import React, { useEffect } from 'react'
-// import { getAnniversaryOccasions } from '../../actions/occasionAction'
+// import { getChristmasOccasions } from '../../actions/occasionAction'
 // import PropTypes from 'prop-types'
 // import './occasions.css'
 // import { connect } from 'react-redux'
@@ -12,19 +12,19 @@
 // import CardMedia from '@material-ui/core/CardMedia'
 // import Button from '@material-ui/core/Button'
 
-// const AnniversaryOccasions = props => {
+// const ChristmasOccasions = props => {
 
 //     const classes = useStyles()
 
 //     useEffect(() => {
 
-//         props.getAnniversaryOccasions()
+//         props.getChristmasOccasions()
 
 //     }, [])
 
-//     AnniversaryOccasions.propTypes = {
+//     ChristmasOccasions.propTypes = {
 //         occasions: PropTypes.object.isRequired,
-//         getAnniversaryOccasions: PropTypes.func.isRequired
+//         getChristmasOccasions: PropTypes.func.isRequired
 //     }
 
 //     return (
@@ -38,10 +38,10 @@
 // 						image={occasion.image}
 // 					/>
 // 					<p price={occasion.price}> </p>
-// 					<Button> Buy Now </Button>
+// 					<Button> Buy Now </Button>				
 // 				</Card>
 // 			))}
-// 			<Footer/>
+// 			<Footer />
 //         </>
 //     )
 // }
@@ -53,7 +53,7 @@
 //     }
 // }
 
-// export default connect(mapStateToProps, { getAnniversaryOccasions }) (AnniversaryOccasions)
+// export default connect(mapStateToProps, { getChristmasOccasions }) (ChristmasOccasions)
 
 // const useStyles = makeStyles((theme) => ({
 // 	root: {
@@ -77,15 +77,15 @@
 
 
 import React from 'react'
-import Custom from '../customization/gridsystem'
-import Header from '../header/header'
-import Footer from '../footer/footer'
+import Birthdaycustom from './grid'
+import Header from '../../header/header'
+import Footer from '../../footer/footer'
 
-export default function anniversary() {
+export default function Birthday() {
 	return (
 		<div>
 		<Header/>
-				<Custom/>
+				<Birthdaycustom/>
 				<Footer/>
 		</div>
 	)
