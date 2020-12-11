@@ -33,8 +33,7 @@ const Customization = props =>
 	return (
 		<>
 		<Header/>
-		<div className='background'>
-			
+		<div className='window'>			
 			{/* <Header/>
 			<Search loadHandler={loadItemsHandler} /> */}
 
