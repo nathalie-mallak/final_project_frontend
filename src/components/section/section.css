@@ -1,27 +1,15 @@
-.cont{
-    align-items: center;
-    justify-self: center;
-    transform: translate(15%,-10%);
-    margin-top: 50px;
-    /* background-image: url(../../image/width.jpg); */
-   
+#contain{
+    background-image: url('../../image/width.jpg');
+    height: 20vh;
+    width: 60%;
+    justify-content: center;
 }
-.h1{
-    text-align:start
-}
-.btn{
-    transform: translate(-550px,30px);
+#btn1{
+    width: 100px;
 }
 .btn2{
-    transform: translate(-520px,30px);
+    width: 120px;
+
 }
 
-.hoad{
-    transform: translate(380px,-170px);
-}
-.head{
-    transform: translate(340px,-170px);
-}
-.h1{
-    text-align: center;
-}
+

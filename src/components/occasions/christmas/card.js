@@ -16,6 +16,8 @@ import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Christmas from '../../../christmas'
+import '../../cards/cards.css'
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 
 
@@ -28,6 +30,10 @@ export default function Maincard(props) {
   };
   const {avatarUrl,title,subtitle,description,imageUrl,details,price} = props;
   const [cart , setCart] = useState([]);
+  const [toggle,setToggle] = useState(false);
+  const toggler = () =>{
+    toggle ? setToggle(false) : setToggle(true);
+  }
   
   
   
@@ -51,7 +57,7 @@ export default function Maincard(props) {
   // }
 
   return (
-    <Card style = {{width:'230px'}}>
+    <Card className="card card text-center shadow">
       <CardHeader
         avatar={
           <Avatar src = {avatarUrl}/>
@@ -60,11 +66,9 @@ export default function Maincard(props) {
         subheader={subtitle}
         className="cardheader"
       />
-      <CardMedia
-        style = {{height:'200px'}}
-        // className={classes.media}
-        image={imageUrl}
-      />
+      <CardMedia className='overflow '>
+      <img src ={imageUrl} alt='bouquet1' className='card-img-top'></img>
+      </CardMedia>
       <CardContent className="cardfooter">
         <Typography variant='body2' color='textSecondary' component='p' style={{color:'black'}}>
          {description}
@@ -74,11 +78,9 @@ export default function Maincard(props) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label='add to favorites'>
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label='share'>
-          <ShareIcon />
+      <IconButton aria-label="Remove from favorites" onClick={toggler}>
+          {toggle ? <ShoppingCartIcon style={{color:"red"}}></ShoppingCartIcon> : <ShoppingCartIcon></ShoppingCartIcon>}
+   
         </IconButton>
         <Typography variant="body2" color="textSecondary" component="p" style={{color:"black"}}>
          {cart.length}

@@ -11,6 +11,7 @@ import FilterVintageIcon from '@material-ui/icons/FilterVintage'
 import MoreIcon from '@material-ui/icons/More'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle'
 import BouquetIcon from '../../image/FlowerIcon.png'
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 // TODO:
 // welcome user
@@ -202,6 +203,10 @@ const Header = props => {
 						<MoreIcon />
 						</IconButton>
 					</div>
+					<div><ShoppingCartIcon
+					className='link'
+						
+					/></div>
 
 				</Toolbar>
 			</AppBar>

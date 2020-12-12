@@ -1,5 +1,6 @@
 import React ,{useState}from 'react'
 import '../occasions.css'
+import '../../cards/cards.css'
 import Card from '@material-ui/core/Card'
 import CardHeader from '@material-ui/core/CardHeader'
 import CardMedia from '@material-ui/core/CardMedia'
@@ -9,8 +10,8 @@ import Collapse from '@material-ui/core/Collapse'
 import Avatar from '@material-ui/core/Avatar'
 import IconButton from '@material-ui/core/IconButton'
 import Typography from '@material-ui/core/Typography'
-import FavoriteIcon from '@material-ui/icons/Favorite'
-import ShareIcon from '@material-ui/icons/Share'
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import RemoveShoppingCartIcon from '@material-ui/icons/RemoveShoppingCart';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
@@ -26,6 +27,10 @@ export default function Maincard(props) {
   const {avatarUrl,title,subtitle,description,imageUrl,details,price} = props
   const [cart , setCart] = useState([])
   
+  const [toggle,setToggle] = useState(false);
+  const toggler = () =>{
+    toggle ? setToggle(false) : setToggle(true);
+  }
   // const addToCart = (Flower) =>{
   //   console.log('add to cart is successfully done')
   //   setCart([...cart,{...Flower}])
@@ -43,17 +48,15 @@ export default function Maincard(props) {
   // }
 
   return (
-    <Card className='card'>
+    <Card className='card card text-center shadow'>
       <CardHeader
         avatar={<Avatar src = {avatarUrl}/>}
         title={title}
         className='cardheader'
       />
-      <CardMedia
-        style = {{height:'200px'}}
-        className='cardimg'
-        image={imageUrl}
-      />
+      <CardMedia className='overflow'>
+      <img src ={imageUrl} alt='bouquet1' className='card-img-top'></img>
+      </CardMedia>
       <CardContent>
         <Typography variant='body2' color='textSecondary' component='p'>
          {description}
@@ -63,11 +66,9 @@ export default function Maincard(props) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label='add to favorites'>
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label='share'>
-          <ShareIcon />
+        <IconButton aria-label="Remove from favorites" onClick={toggler}>
+          {toggle ? <ShoppingCartIcon style={{color:"red"}}></ShoppingCartIcon> : <ShoppingCartIcon></ShoppingCartIcon>}
+   
         </IconButton>
         <IconButton
           onClick={handleExpandClick}

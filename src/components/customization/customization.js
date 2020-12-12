@@ -38,7 +38,7 @@ const Customization = props =>
 			<Search loadHandler={loadItemsHandler} /> */}
 
 			<p className='flowersTitle'> Where Flowers Bloom, So Does Hope </p>
-			<p className='options'> Let's first choose the flower arragement </p> 
+			<p className='options'> Let's first choose the flower arrangement </p> 
 			<Custom/>
 		</div>
 

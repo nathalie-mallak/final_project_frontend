@@ -5,6 +5,8 @@ import { Provider } from 'react-redux'
 import store from './store'
 import axios from 'axios'
 import "bootstrap/dist/css/bootstrap.min.css"
+import "react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css";
+import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
 
 axios.defaults.baseURL = 'http://localhost:5000'
 

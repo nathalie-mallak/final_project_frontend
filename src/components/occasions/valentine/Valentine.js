@@ -86,13 +86,8 @@ export default function Christmas() {
 	return (
 		<>
 		<Header/>
-<<<<<<< HEAD
 		<div className='window'>
-			<Christmascustom/>
-=======
-				<Valentinecustom/>
-				<Footer/>
->>>>>>> 614a1466d83be6e632d649c58af4876f2dba9665
+			<Valentinecustom/>
 		</div>
 		<Footer/>
 		</>

@@ -1,48 +1,37 @@
-import React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
+import React, { useState } from 'react';
+import { Modal } from './modal'
 import './section.css'
-import Back from '../../image/width.jpg'
-import Button from '@material-ui/core/Button';
-import { makeStyles } from '@material-ui/core/styles';
-import DeleteIcon from '@material-ui/icons/Delete';
-
-
-const useStyles = makeStyles((theme) => ({
-  button: {
-    margin: theme.spacing(1),
-  },
-}));
 
 
 
-export default function SimpleContainer() {
-    
+export default function Section() {
+
+  const [show, setShow] = useState(false);
+
+  const closeModalHandler = () => setShow(false);
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <Container  className="cont" >
-        <img src={Back} style={{width:"130vh",height:"30vh"}} />
-        <Button
-        variant="contained"
-        color="secondary"
-        className = "btn"
-      >
-        Join Us !
-      </Button>
-        <Button
-        variant="contained"
-        color="secondary"
-        className = "btn2"
-      >
-        Read more
-      </Button>
-      <h3 classname="hoad">Upcoming Events</h3>
-        <h5 classname="head">Waiting You!!</h5>
-       
-       <h1 className="h1"></h1>
-      </Container>
-    </React.Fragment>
-  );
-}
+<div>
+    <div className="container mt-4 mb-3 align-items-center justify-content-center" id="contain">
+   
+          <div className="row row-content mb-2">
+              <h5>Welcome To Our Event</h5>
+              </div>
+              <div className="row row-content">
+                  <div className="col-6 col-md-5">
+                  {show ? <div onClick={closeModalHandler}></div> : null }
+                  <button  onClick={() => setShow(true)} type="button" className="btn btn-danger btn2"> Join us</button>
+                  </div>
+                  <div className="col-6 col-md-5">
+                  <button onClick={() => setShow(true)} type="button" className="btn btn-danger btn2">Read More</button>
+                  </div>
+          </div>
+     </div>
+     <Modal show={show} close={closeModalHandler}/>
+  </div>
+
+
+  
+
+
+  )
+  }
