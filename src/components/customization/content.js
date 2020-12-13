@@ -11,7 +11,7 @@ export default function Cont() {
   }
     const getFlower = (Flowerobj) =>{
         return(
-            <Grid item xs={12} sm={4} md={3}>
+            <Grid item xs={12} sm={4} md={3} id="cardmobile">
                 <Maincard {...Flowerobj}/>
             </Grid>
         )

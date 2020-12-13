@@ -80,3 +80,19 @@
     overflow: hidden;
 }
 
+@media (width:375px){
+    #cardmobile{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #cardo{
+        transform: translateX(60px);
+    }
+    .options{
+        transform: translateX(-20px);
+    }
+    .flowersTitle{
+        font-size: 28px;
+    }
+}

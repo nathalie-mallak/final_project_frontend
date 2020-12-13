@@ -50,7 +50,7 @@ export default function Maincard(props) {
   // }
 
   return (
-    <Card className='card card text-center shadow'>
+    <Card className='card card text-center shadow' id="cardo">
       <CardHeader
         avatar={<Avatar src = {avatarUrl}/>}
         title={title}
