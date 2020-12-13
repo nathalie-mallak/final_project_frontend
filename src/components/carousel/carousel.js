@@ -17,19 +17,18 @@ export default function Slider() {
         <>
             <Carousel fade='true' activeIndex={index} onSelect={handleSelect} className='carouselBody'>
                 <Carousel.Item>
-                <img className='d-block w-100' src={Slider3} alt='Second image' style={{ height:'80vh' }}/>
+                <img className='d-block w-100 animation' src={Slider3} alt='Second image' style={{ height:'80vh' }}/>
                     <Carousel.Caption className='slider3'>
-                        Flowers are love's true language
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                <img className='d-block w-100' src={Slider1} alt='first image' style={{ height:'80vh' }}/>
+                <img className='d-block w-100 animation' src={Slider1} alt='first image' style={{ height:'80vh' }}/>
                     <Carousel.Caption className='slider1'>
                         
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                <img className='d-block w-100' src={Slider2} alt='Second image' style={{ height:'80vh' }}/>
+                <img className='d-block w-100 animation' src={Slider2} alt='Second image' style={{ height:'80vh' }}/>
                     <Carousel.Caption className='slider2'>
                       
                     </Carousel.Caption>
