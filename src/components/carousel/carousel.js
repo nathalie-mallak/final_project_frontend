@@ -1,7 +1,7 @@
 import React , {useState} from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import Slider1 from '../../image/Slider7.jpg'
-import Slider2 from '../../image/commercial.jpg'
+import Slider2 from '../../image/commercial1.jpg'
 import Slider3 from '../../image/Slider3.jpg'
 import './carousel.css'
 
@@ -28,7 +28,7 @@ export default function Slider() {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                <img className='d-block w-100 animation' src={Slider2} alt='Second image' style={{ height:'80vh' }}/>
+                <img className='d-block w-100 animation' src={Slider2} alt='Second image' style={{ height:'80vh',width:"100%" }}/>
                     <Carousel.Caption className='slider2'>
                       
                     </Carousel.Caption>
