@@ -76,17 +76,21 @@
 // }))
 
 
+
 import React from 'react'
 import Christmascustom from './grid'
 import Header from '../../header/header'
 import Footer from '../../footer/footer'
+import '../occasions.css'
 
-export default function Christmas() {
+export default function Birthday() {
 	return (
 		<div>
 		<Header/>
-				<Christmascustom/>
-				<Footer/>
+		<div className='window'>
+			<Christmascustom/>
+		</div>				
+		<Footer/>
 		</div>
 	)
 }

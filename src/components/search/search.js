@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef, useCallback } from 'react'
 import SearchIcon from '@material-ui/icons/Search'
 import InputBase from '@material-ui/core/InputBase'
 import { fade, makeStyles } from '@material-ui/core/styles'
-import Nat from './nat'
 import axios from 'axios'
 import debounce from 'lodash.debounce'
 
@@ -57,9 +56,6 @@ const Search = props => {
 	// 	return getFlowers.filter(item => item.toLowerCase().includes(inputValue.toLowerCase()))
 	// }
 
-
-		
-
     return (
         <>
             <div className={classes.search}>
@@ -78,7 +74,6 @@ const Search = props => {
 					ref={inputRef}
 				/>
 			</div>
-				{/* <Nat names={dynamicSearch()} /> */}
         </>
     )
 }
@@ -124,7 +119,7 @@ const useStyles = makeStyles((theme) => ({
 		[theme.breakpoints.up('sm')]: {
 			width: '12ch',
 			'&:focus': {
-				width: '20ch',
+				width: '18ch',
 			},
 		},
     }

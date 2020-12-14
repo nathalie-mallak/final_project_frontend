@@ -80,13 +80,16 @@ import React from 'react'
 import Birthdaycustom from './grid'
 import Header from '../../header/header'
 import Footer from '../../footer/footer'
+import '../occasions.css'
 
 export default function Birthday() {
 	return (
 		<div>
 		<Header/>
-				<Birthdaycustom/>
-				<Footer/>
+		<div className='window'>
+			<Birthdaycustom/>
+		</div>				
+		<Footer/>
 		</div>
 	)
 }

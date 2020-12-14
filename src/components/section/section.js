@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { Modal } from './modal'
 import './section.css'
 
-
-
 export default function Section() {
 
   const [show, setShow] = useState(false);
@@ -14,7 +12,7 @@ export default function Section() {
     <div className="container mt-4 mb-3 align-items-center justify-content-center" id="contain">
    
           <div className="row row-content mb-2">
-              <h5>Welcome To Our Event</h5>
+              <h5>Welcome To Our Shop </h5>
               </div>
               <div className="row row-content">
                   <div className="col-6 col-md-5">

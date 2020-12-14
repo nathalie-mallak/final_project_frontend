@@ -1,26 +1,20 @@
 export default [
     {
       id: "1",
-      title: "Rose",
+      title: "Indian Summer",
       price: "$49.99",
-      description:
-        "Beautiful flower ",
       avatarUrl:
         "https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg",
       imageUrl:
         "/image/Rose.jpg",
       details:
         "A flower is a special part of the plant. Flowers are also called the bloom or blossom of a plant. Flowers have petals. Inside the part of the flower that has petals are the parts which produce pollen and seeds."
-
-      
-        
+   
     },
     {
       id: "2",
-      title: "Gardenia",
+      title: "Tropical Summer",
       price: "$19.99",
-      description:
-        "Beautiful flower",
       avatarUrl:
         "https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg",
       imageUrl:
@@ -30,10 +24,8 @@ export default [
     },
     {
       id: "3",
-      title: "Blossom",
+      title: "Cool Breeze",
       price: "$89.99",
-      description:
-        "Beautiful flower",
       avatarUrl:
         "https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg",
       imageUrl:
@@ -43,10 +35,8 @@ export default [
     },
     {
       id: "4",
-      title: "Bloom",
+      title: "Summer Glow",
       price: "$36.48",
-      description:
-        "Beautiful flower",
       avatarUrl:
         "https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg",
       imageUrl:
@@ -56,10 +46,8 @@ export default [
     },
     {
       id: "5",
-      title: "Tulip",
+      title: "Meadow Fresh",
       price: "$32.95",
-      description:
-        "Beautiful flower",
       avatarUrl:
         "https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg",
       imageUrl:
@@ -69,10 +57,8 @@ export default [
     },
     {
       id: "6",
-      title: "Orchid ",
+      title: "Felicity",
       price: "$51.99",
-      description:
-        'Beautiful flower',
       avatarUrl:
         "https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg",
       imageUrl:
@@ -82,10 +68,8 @@ export default [
     },
     {
       id: "7",
-        title: "Bergarder",
+        title: "Harvest Time",
         price: "$47.99",
-        description:
-          'Beautiful flower',
         avatarUrl:
           "https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg",
         imageUrl:
@@ -95,10 +79,8 @@ export default [
       },
       {
         id: "8",
-        title: "Sunflower ",
+        title: "Stars",
         price: "$37.99",
-        description:
-          'Beautiful flower',
         avatarUrl:
           "https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg",
         imageUrl:

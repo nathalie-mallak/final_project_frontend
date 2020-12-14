@@ -5,12 +5,13 @@ import Search from '../search/search'
 import { connect } from 'react-redux'
 import { logout } from '../../actions/authActions'
 import PropTypes from 'prop-types'
+import logo from '../../image/logo2.png'
 
 import { AppBar, Toolbar, Typography, Paper, Grow, Popper, MenuItem, MenuList, IconButton, Menu, fade, makeStyles }from '@material-ui/core'
 import FilterVintageIcon from '@material-ui/icons/FilterVintage'
 import MoreIcon from '@material-ui/icons/More'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle'
-import BouquetIcon from '../../image/FlowerIcon.png'
+// import BouquetIcon from '../../image/FlowerIcon.png'
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 // TODO:
@@ -134,23 +135,9 @@ const Header = props => {
 				<Toolbar>
 					<Typography className={classes.title} variant='h6' noWrap>
 						<Link to='/' className='link'>
-							Flowers For You <span> <img src = {BouquetIcon} id="logo"></img> </span>
+							<span><img src = {logo} id="logo"></img> </span>
 						</Link>
 					</Typography>
-		
-					{/* <div className={classes.search}>
-						<div className={classes.searchIcon}>
-							<SearchIcon />
-						</div>
-						<InputBase
-						placeholder='Search…'
-						classes={{
-							root: classes.inputRoot,
-							input: classes.inputInput,
-						}}
-						inputProps={{ 'aria-label': 'search' }}
-						/>
-					</div> */}
 
 					<Search />
 
@@ -233,8 +220,9 @@ const useStyles = makeStyles((theme) => ({
 	},
 
 	bar: {
-		marginBottom: '20px',
-		padding: '15px 10px',
+		// marginBottom: '20px',
+		paddingBottom: '5px',
+		paddingRight: '7px',
 		backgroundColor: '#BF5E66'
 	},
 
@@ -245,54 +233,12 @@ const useStyles = makeStyles((theme) => ({
 			display: 'block',
 		},
 	},
-	search: {
-		position: 'relative',
-		borderRadius: theme.shape.borderRadius,
-		backgroundColor: fade(theme.palette.common.white, 0.15),
-		'&:hover': {
-			backgroundColor: fade(theme.palette.common.white, 0.25),
-		},
-		marginLeft: 0,
-		width: '100%',
-		[theme.breakpoints.up('sm')]: {
-			marginLeft: theme.spacing(1),
-			width: 'auto',
-		},
-	},
-	searchIcon: {
-		padding: theme.spacing(0, 2),
-		height: '100%',
-		position: 'absolute',
-		pointerEs: 'none',
-		display: 'flex',
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-	inputRoot: {
-		border: '1px solid #ced4da',
-		borderRadius: '5px',
-		height: '40px',
-		color: 'inherit',
-	},
-	inputInput: {
-		padding: theme.spacing(1, 1, 1, 0),
-		// vertical padding + font size from searchIcon
-		paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-		transition: theme.transitions.create('width'),
-		width: '100%',
-		[theme.breakpoints.up('sm')]: {
-			width: '12ch',
-			'&:focus': {
-				width: '20ch',
-			},
-		},
-	},
 	sectionDesktop: {
 		display: 'none',
 		[theme.breakpoints.up('md')]: {
 		  display: 'flex',
 		},
-		width: '65%',
+		width: '58%',
 		justifyContent: 'space-evenly',
 		marginTop: '15px'
 	},

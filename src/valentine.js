@@ -1,10 +1,8 @@
 export default [
     {
       id: '1',
-      title: 'Rose',
+      title: 'Flower Of Love',
       price: '$49.99',
-      description:
-        'Beautiful flower ',
       avatarUrl:
         'https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg',
       imageUrl:
@@ -14,10 +12,8 @@ export default [
     },
     {
       id: '2',
-      title: 'Gardenia',
+      title: 'I Love You',
       price: '$19.99',
-      description:
-        'Beautiful flower',
       avatarUrl:
         'https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg',
       imageUrl:
@@ -27,10 +23,8 @@ export default [
     },
     {
       id: '3',
-      title: 'Blossom',
+      title: 'For You',
       price: '$89.99',
-      description:
-        'Beautiful flower',
       avatarUrl:
         'https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg',
       imageUrl:
@@ -40,10 +34,8 @@ export default [
     },
     {
       id: '4',
-      title: 'Bloom',
+      title: 'Amour',
       price: '$36.48',
-      description:
-        'Beautiful flower',
       avatarUrl:
         'https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg',
       imageUrl:
@@ -53,10 +45,8 @@ export default [
     },
     {
       id: '5',
-      title: 'Tulip',
+      title: 'With Love',
       price: '$32.95',
-      description:
-        'Beautiful flower',
       avatarUrl:
         'https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg',
       imageUrl:
@@ -66,10 +56,8 @@ export default [
     },
     {
       id: '6',
-      title: 'Orchid ',
+      title: 'Celebration Time',
       price: '$51.99',
-      description:
-        'Beautiful flower',
       avatarUrl:
         'https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg',
       imageUrl:
@@ -79,10 +67,8 @@ export default [
     },
     {
       id: '7',
-        title: 'Bergarder',
+        title: 'Thinking Of You',
         price: '$47.99',
-        description:
-          'Beautiful flower',
         avatarUrl:
           'https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg',
         imageUrl:
@@ -92,10 +78,8 @@ export default [
       },
       {
         id: '8',
-        title: 'Sunflower ',
+        title: 'DreamLand',
         price: '$37.99',
-        description:
-          'Beautiful flower',
         avatarUrl:
           'https://previews.123rf.com/images/jpgon/jpgon1411/jpgon141100529/33774360-illustration-of-a-cute-flower-avatar-wearing-glasses.jpg',
         imageUrl:

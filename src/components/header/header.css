@@ -7,14 +7,6 @@
 	margin: 0;
 }
 
-.linksDiv
-{
-	display: flex;
-	justify-content: space-evenly;
-	width: 60%;
-	font-size: 17px;
-}
-
 .link 
 {
 	color: white;
@@ -44,8 +36,10 @@
 .dropdown{
 	z-index: 10;
 }
+
 #logo{
-	height: 30px;
-	width: 30px;
-	transform: translate(20px,-4px)
+	height: 120px;
+	width: 250px;
+	transform: translate(20px,-4px);
+	margin-left: -10px
 }
