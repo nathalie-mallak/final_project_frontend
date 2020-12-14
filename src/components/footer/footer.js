@@ -32,7 +32,7 @@ const Footer = () => {
                     <Grid item xs={8} sm={4}>
                         <h4 className='h4'> Contact Information </h4>
                         <h6 className='h6'><span><LocationOnIcon /></span> Address </h6>
-                        <p className='contactInfo'> Hamra-Street, Beirut, Lebanon </p>
+                        <p className='contactInfo'> Baakline, Shouf, Lebanon </p>
                         <h6 className='h6'><span><PhoneIcon/></span> Phone </h6>
                         <p className='contactInfo'> +961 71 234 567 </p>
                         <h6 className='h6'><span><MailIcon/></span> Email </h6>

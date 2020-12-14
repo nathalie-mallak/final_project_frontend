@@ -92,6 +92,8 @@ const Login = props => {
 					/>
 				</FormControl>
 
+				<p class='g-signin2' data-onsuccess='onSignIn' data-width='300' data-height='50' data-longtitle='true'></p>
+				
 				<button
 					type='submit' 
 					className='buttonStyle'

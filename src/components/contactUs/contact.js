@@ -61,7 +61,7 @@ const Contact = () => {
 
 							<div className='subDiv'> 
 								<h5> Address </h5>
-								<p className='p'> Hamra-Street, Beirut, Lebanon </p>
+								<p className='p'> Baakline, Shouf, Lebanon </p>
 							</div>
 
 							<div className='subDiv'> 

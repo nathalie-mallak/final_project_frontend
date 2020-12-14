@@ -1,7 +1,7 @@
 import React , {useState} from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import Slider1 from '../../image/Slider7.jpg'
-import Slider2 from '../../image/commercial1.jpg'
+import Slider2 from '../../image/delivery.jpg'
 import Slider3 from '../../image/Slider3.jpg'
 import './carousel.css'
 

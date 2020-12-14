@@ -14,35 +14,14 @@ const AboutUs = () => {
 		<>
 			<Header />
 			<div className={classes.root}>
-                <Grid container justify='space-evenly'>
-                    <Grid item xs={8} sm={6}>
-						<h3> About Us </h3>					
-						<p className='p'> Propelled by our affection for flowers and energy about nature, it is our obsession to make creative and noteworthy plant and new flower courses of action. We trust that the best, freshest flowers deliver the most noteworthy presentations. <br/><br/>
+				<h3> About Us </h3>					
+				<p className='p'><span className='span'>Flowers For You </span> is a 10 years old flower shop located in the heart of Chouf. Talal opened a flower stand in 1997. Today, he decided to scale up his business and digitalize it. So he chose us! We then created an E-commerce website utilizing the latest web dev technologies to enhance the shop’s reputation and drive sales potential.
+				<br/><br/>
 
-						<span className='span'>Flowers For You </span> is glad to give quality flowers and plants to our customers. Our retail premises opened in 2019. From that point forward, we have bloomed into a full administration flower specialist with both private and corporate customers. Our master staff is here to enable all customers to pick the best flowers and plants for all events and purposes </p>
-					</Grid>
-					<Grid item xs={8} sm={4}>
-						<div className='infoContainer'>
-							<h3> Contact Us </h3>
-							<p className='quote'> We will be happy to receive your inquiries and orders<span className='span'> <FilterVintageIcon size='small'/> </span> </p>
-							
-							<div className='subDiv'> 
-								<h5> From Lebanon </h5>
-								<p className='p'> +96171234567 </p>
-							</div>
+				Propelled by our affection for flowers and energy about nature, it is our obsession to make creative and noteworthy plant and new flower courses of action. We trust that the best, freshest flowers deliver the most noteworthy presentations. 
 
-							<div className='subDiv'> 
-								<h5> Address </h5>
-								<p className='p'> Hamra-Street, Beirut, Lebanon </p>
-							</div>
-
-							<div className='subDiv'> 
-								<h5> Mail Us </h5>
-								<p className='p'> customerservice@flowersforyou.com </p>
-							</div>
-						</div>
-					</Grid>
-				</Grid>
+				<br/><br/>
+				<span className='span'>Flowers For You </span> is glad to give quality flowers and plants to our customers. Our retail premises opened in 2019. From that point forward, we have bloomed into a full administration flower specialist with both private and corporate customers. Our master staff is here to enable all customers to pick the best flowers and plants for all events and purposes </p>
 			</div>
 			<Footer />
 		</>
@@ -58,9 +37,8 @@ const useStyles = makeStyles(() => ({
 	  border: '3px solid #BF5E66',
 	  borderRadius: '30px',
       width: '94%',
-      padding: '30px 0px',
-	  marginBottom: '10px',
+      padding: '30px 40px',
 	  justifyContent: 'center',
-	  margin: '20px auto',
+	  margin: '50px auto',
     }
 }))
